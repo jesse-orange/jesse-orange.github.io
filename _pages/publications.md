@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Publicationsddd"
+title: <img align="left" width="80" height="80" src="https://jesse-orange.github.io/images/star.png" alt="aaaaaa">"Publicationsddd"
 permalink: /publications/
 author_profile: true
 header: 
