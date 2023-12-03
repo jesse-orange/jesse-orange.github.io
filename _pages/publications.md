@@ -3,6 +3,8 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
+header: 
+  og_image: "/star.png"
 ---
 
 {% if author.googlescholar %}
