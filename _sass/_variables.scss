@@ -55,10 +55,10 @@ $lighter-gray               : mix(#fff, $gray, 90%);
 
 $body-color                 : #ffffff;//#252a34;
 $background-color           : #ffffff;//#252a34;
-$code-background-color      : mix(#000, $background-color, 15%);
-$code-background-color-dark : mix(#000, $background-color, 20%);
-$text-color                 : #eaeaea;
-$border-color               : mix(#fff, $background-color, 20%);
+$code-background-color      : #ffffff;//mix(#000, $background-color, 15%);
+$code-background-color-dark : #ffffff;//mix(#000, $background-color, 20%);
+$text-color                 : #ffffff;//#eaeaea;
+$border-color               : #ffffff;//mix(#fff, $background-color, 20%);
 
 $primary-color              : #8cd2d5;
 $success-color              : #62c462;
