@@ -8,7 +8,7 @@
 # Site Settings
 locale                   : "en-US"
 title                    : "Home"
-logo                     : "logo.png"
+logo                     : "sitelogo.png"
 title_separator          : "-"
 name                     : &name "Yi-Chien Lin"
 description              : &description "Jason's Homepage"
