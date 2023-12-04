@@ -8,10 +8,10 @@
 # Site Settings
 locale                   : "en-US"
 title                    : "Orange's Website"
+logo                     : "sitelogo.png"
 title_separator          : "-"
 name                     : &name "Jixi Gu"
 description              : &description "Just call me Jesse. My nickname is Orange."
-logo                     : sitelogo.png
 url                      : https://jesse-orange.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "jesse-orange/jesse-orange.github.io"
