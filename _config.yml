@@ -7,14 +7,14 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Home"
+title                    : "Orange's Website"
 title_separator          : "-"
-name                     : &name "Yi-Chien Lin"
-description              : &description "Jason's Homepage"
+name                     : &name "Jixi Gu"
+description              : &description "Orange's Website"
 url                      : https://jesse-orange.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "jesse-orange.github.io"
-teaser                   : "teaser.png"
+teaser                   : 
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
@@ -81,9 +81,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Yi-Chien Lin"
+  name             : "Jixi Gu"
   avatar           : "profile.jpg"
-  bio              : "Just call me Jason."
+  bio              : "Just call me Jesse. <br/> My nickname is Orange. "
   location         : 
   employer         :
   pubmed           : 
@@ -94,16 +94,16 @@ author:
   bitbucket        :
   codepen          :
   dribbble         :
-  flickr           : "194564724@N08/albums"
+  flickr           : 
   facebook         :
   foursquare       :
-  github           : "jasonlin316"
+  github           : "jesse-orange"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "jasonlin316"
+  linkedin         : 
   orcid            : 
   pinterest        :
   soundcloud       :
