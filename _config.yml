@@ -12,9 +12,9 @@ logo                     : "sitelogo.png"
 title_separator          : "-"
 name                     : &name "Yi-Chien Lin"
 description              : &description "Jason's Homepage"
-url                      : https://jasonlin316.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://jesse-orange.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "jasonlin316.github.io"
+repository               : "jesse-orange.github.io"
 teaser                   : "teaser.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
