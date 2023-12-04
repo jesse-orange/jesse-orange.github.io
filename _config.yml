@@ -8,7 +8,7 @@
 # Site Settings
 locale                   : "en-US"
 title                    : "Orange's Website"
-logo                     : "logo.png"
+logo                     : "https://jesse-orange.github.io/images/logo.png"
 title_separator          : "-"
 name                     : &name "Jixi Gu"
 description              : &description "Just call me Jesse. My nickname is Orange."
