@@ -83,7 +83,7 @@ analytics:
 author:
   name             : "Jixi Gu"
   avatar           : "profile.png"
-  bio              : "My nickname is Orange and you can call me Jesse"
+  bio              : "My nickname is Orange and <br/> you can call me Jesse"
   location         : "Location"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
