@@ -8,7 +8,7 @@
 # Site Settings
 locale                   : "en-US"
 title                    : "Orange's Website"
-logo                     : "sitelogo.png"
+logo                     : "site-logo.png"
 title_separator          : "-"
 name                     : &name "Jixi Gu"
 description              : &description "Just call me Jesse. My nickname is Orange."
@@ -83,7 +83,7 @@ analytics:
 author:
   name             : "Jixi Gu"
   avatar           : "profile.png"
-  bio              : "My nickname is Orange and <br/> you can call me Jesse"
+  bio              : "My nickname  <br/> you can call me Jesse"
   location         : "Location"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
