@@ -63,7 +63,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  "teaser.png"
+og_image                 :  
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -84,7 +84,7 @@ author:
   name             : "Jixi Gu（顾缉熙）"
   avatar           : "profile.jpg"
   bio              : "Just call me Jesse. <br/> My nickname is orange. "
-  location         : "Hello"
+  location         : 
   employer         : 
   pubmed           : 
   googlescholar    : 
@@ -114,7 +114,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : "OKOKOK"
+  youtube          : 
   wikipedia        :
 
 
