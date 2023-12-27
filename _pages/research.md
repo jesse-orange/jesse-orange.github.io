@@ -9,13 +9,17 @@ author_profile: true
 {% include base_path %}
 
 <br>
-<table border="0">
- <tr>
-    <td><b style="font-size:30px">Title</b></td>
-    <td><b style="font-size:30px">Title 2</b></td>
- </tr>
- <tr>
-    <td>Lorem ipsum ...</td>
-    <td>Lorem ipsum ...</td>
- </tr>
-</table>
+<div align="center">
+<table rules="none">
+<tr>
+<td>
+<p>文字</p>
+<p>文字</p>
+<p>文字</p>
+</td>
+<td>
+<img src="图片地址" style="zoom:50%"  alt="图片名称"/>
+</td>
+</tr>
+</table>    
+</div>
