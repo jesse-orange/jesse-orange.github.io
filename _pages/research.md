@@ -8,6 +8,7 @@ author_profile: true
 
 {% include base_path %}
 
+<br>
 <table border="0">
  <tr>
     <td><b style="font-size:30px">Title</b></td>
