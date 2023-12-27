@@ -9,8 +9,10 @@ author_profile: true
 {% include base_path %}
 
 <br>
-<img src="/images/profile.jpg" width="10%">
-Hello
+<div>
+<img src="/images/profile.jpg" width="10%" style="vertical-align:top">
+<span>Hello</span>
+</div>
 
 
 
