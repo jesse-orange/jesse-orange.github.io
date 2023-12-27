@@ -9,7 +9,7 @@ author_profile: true
 {% include base_path %}
 
 <br>
-<div align="center">
+
 <table rules="none">
 <tr>
 <td>
@@ -22,4 +22,4 @@ author_profile: true
 </td>
 </tr>
 </table>    
-</div>
+
