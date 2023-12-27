@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: <img align="left" width="10" height="10" src="https://jesse-orange.github.io/images/star.png" alt="aaaaaa">"Publicationsddd"
-permalink: /publications/
+permalink: /publications1/
 author_profile: true
 header: 
   og_image: "/images/star.png"
