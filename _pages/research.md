@@ -9,7 +9,7 @@ author_profile: true
 {% include base_path %}
 
 <br>
-<img src="/images/profile.jpg" width=10%>
+<img src="/images/profile.jpg">
 
 
 
