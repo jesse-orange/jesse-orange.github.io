@@ -11,7 +11,6 @@ author_profile: true
 
 <div>
 <img src="/images/profile.jpg" width=10% style="vertical-align:top">
-
 </div>
 
 
