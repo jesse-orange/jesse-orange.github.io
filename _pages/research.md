@@ -9,9 +9,8 @@ author_profile: true
 {% include base_path %}
 
 
-<div style="display: flex; flex-direction: row;">
-<img src="image.jpg" style="width: 50%;">
-<p style="width: 50%;">这里是文字</p>
+<div>
+    <img src="images/profile.jpg" style="vertical-align:middle;">
+    <span>设置成功，请牢记新的登陆密码</span>
 </div>
-
 
