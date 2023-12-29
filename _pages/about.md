@@ -18,7 +18,7 @@ I am currently a high school student in Nanjing, China. My education is as follo
 - &emsp; Grade 1, 3, 4 and 6 in [Nanjing Longjiang Primary School](http://njljxx.njgljy.com/), China
 - &emsp; Grade 2 in [Carlton Public School](https://carlton-p.schools.nsw.gov.au/), Australia
 - &emsp; Grade 5 in [Horizon Elementary School](https://www.madisoncity.k12.al.us/horizon), US
-- &emsp; Grade 7-9 in [Middle School Affiliated to Nanjing Normal University Shuren Campus](http://www.nsfzsr.cn/), China
+- &emsp; Grade 7-9 in [Nanjing Shuren Middel School](http://www.nsfzsr.cn/), China
 - &emsp; Grade 10-12 in [Najing No.1 High School](https://en.wikipedia.org/wiki/Nanjing_No.1_High_School), China
 
 
