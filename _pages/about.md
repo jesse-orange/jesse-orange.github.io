@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: <img src="/images/sitegif/aboutme.gif" width="20%">
+title: <img src="/images/sitegif/aboutme.gif" width="30%">
 excerpt: "About me"
 author_profile: true
 redirect_from: 
