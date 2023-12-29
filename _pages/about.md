@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About me"
+title: <img src="/images/sitegif/aboutme.gif" width="20%">
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -21,5 +21,5 @@ I am currently a high school student in Nanjing, China. My education is as follo
 - &emsp; Grade 7-9 in [Nanjing Shuren Middel School](http://www.nsfzsr.cn/), China
 - &emsp; Grade 10-12 in [Najing No.1 High School](https://en.wikipedia.org/wiki/Nanjing_No.1_High_School), China
 
-<img src="/images/sitegif/aboutme.gif" width="10%">
+
 
