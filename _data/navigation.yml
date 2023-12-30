@@ -1,25 +1,21 @@
 # main links links
 main:
+  - title: "Activities"
+    url: /activities/
+
+  - title: "Awards"
+    url: /awards/
+
+  - title: "Hobbies"
+    url: /hobbies/    
+
   - title: "Research"
-    url: /research/
-
-  - title: "Publications1"
-    url: /publications1/
-
-  - title: "Talks"
-    url: /talks/    
-
-  - title: "Teaching"
-    url: /teaching/    
+    url: /research/    
     
- # - title: "Portfolio"
-  #  url: /portfolio/
+ # - title: "Publications"
+  #  url: /publications/
         
-  - title: "Blogs"
-    url: /categories/
+#  - title: "CV"
+ #   url: /cv/
     
-  - title: "CV"
-    url: /cv/
-    
-#  - title: "Guide"
- #   url: /markdown/
+
