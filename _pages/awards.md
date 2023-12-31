@@ -5,4 +5,4 @@ permalink: /awards/
 author_profile: true
 ---
 
- &emsp; &emsp; <img src="/images/sitegif/math.gif" width="20%"> &emsp; &emsp; <img src="/images/sitegif/xiangqi.gif" width="15%"> &emsp; &emsp; &emsp; &emsp; <img src="/images/sitegif/chess.gif" width="16.5%">  &emsp; &emsp; 
+ &emsp; &emsp; &emsp; <img src="/images/sitegif/math.gif" width="16.5%"> &emsp; &emsp; &emsp; &emsp; &emsp;<img src="/images/sitegif/xiangqi.gif" width="15%">&emsp;&emsp; &emsp; &emsp; &emsp; <img src="/images/sitegif/chess.gif" width="16.5%">  &emsp; &emsp; 
