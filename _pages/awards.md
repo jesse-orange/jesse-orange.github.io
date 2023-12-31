@@ -1,6 +1,8 @@
 ---
 layout: archive
-title: "Awards"
+title: " "
 permalink: /awards/
 author_profile: true
 ---
+
+<img src="/image/sitegif/xiangqi.gif">
