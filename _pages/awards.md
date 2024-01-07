@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 <p style="font-size: 30px;">
-<img src="/images/sitegif/math.gif" width="10%" class="img-center">
+<img src="/images/sitegif/math.gif" width="8%" class="img-center">
 <b>&emsp; MATH</b>
 </p>
 
@@ -15,7 +15,7 @@ author_profile: true
 <hr style="border-width: 0.5px; color=gray">
 
 <p style="font-size: 30px;">
-<img src="/images/sitegif/xiangqi.gif" width="10%" class="img-center">
+<img src="/images/sitegif/xiangqi.gif" width="8%" class="img-center">
 <b>&emsp; Chinese Chess (Xiangqi, 中国象棋)</b>
 </p>
 
@@ -24,7 +24,7 @@ author_profile: true
 <hr size="0.1">
 
 <p style="font-size: 30px;">
-<img src="/images/sitegif/chess.gif" width="10%" class="img-center">
+<img src="/images/sitegif/chess.gif" width="8%" class="img-center">
 <b>&emsp; Chess</b>
 </p>
 
