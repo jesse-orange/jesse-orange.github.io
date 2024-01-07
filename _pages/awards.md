@@ -13,6 +13,7 @@ author_profile: true
 - 2020
 
 <hr style="border-width: 0.3px; color=gray">
+<br>
 
 <p style="font-size: 30px;">
 <img src="/images/sitegif/xiangqi.gif" width="8%" class="img-center">
@@ -22,6 +23,7 @@ author_profile: true
 - 2020
 
 <hr style="border-width: 0.3px; color=gray">
+<br>
 
 <p style="font-size: 30px;">
 <img src="/images/sitegif/chess.gif" width="8%" class="img-center">
