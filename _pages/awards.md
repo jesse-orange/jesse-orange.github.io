@@ -12,7 +12,7 @@ author_profile: true
 
 - 2020
 
-<hr size="0.1" color="#A9A9A9">
+<hr style="border-width: 2px; color=#0000FF">
 
 <p style="font-size: 30px;">
 <img src="/images/sitegif/xiangqi.gif" width="10%" class="img-center">
