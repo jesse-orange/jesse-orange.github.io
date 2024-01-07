@@ -11,9 +11,9 @@ author_profile: true
 </p>
 
 - 2020
-- 
+
 <br>
-<hr style="border-width: 0.3px; color=gray">
+<hr style="border-width: 0.2px; color=gray">
 
 
 <p style="font-size: 30px;">
@@ -31,7 +31,6 @@ author_profile: true
 <img src="/images/sitegif/chess.gif" width="8%" class="img-center">
 <b>&emsp; Chess</b>
 </p>
-<hr style="border-width: 0.2px; color=gray">
 
 - 2020
 
