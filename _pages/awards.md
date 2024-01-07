@@ -16,7 +16,7 @@ author_profile: true
 
 <p style="font-size: 30px;">
 <img src="/images/sitegif/xiangqi.gif" width="10%" class="img-center">
-<b>&emsp; Xiangqi (Chinese Chess, 中国象棋)</b>
+<b>&emsp; Chinese Chess (Xiangqi, 中国象棋)</b>
 </p>
 
 - 2020
