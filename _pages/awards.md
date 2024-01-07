@@ -13,7 +13,7 @@ author_profile: true
 - 2020
 
 <br>
-<hr style="border-width: 0.2px; color=gray">
+<hr style="border-width: 0.1px; color=gray">
 
 
 <p style="font-size: 30px;">
@@ -24,7 +24,7 @@ author_profile: true
 - 2020
   
 <br>
-<hr style="border-width: 0.2px; color=gray">
+<hr style="border-width: 0.1px; color=gray">
 
 
 <p style="font-size: 30px;">
