@@ -10,7 +10,7 @@ author_profile: true
 
 <p style="font-size: 20px;">
 <img src="/images/sitegif/math.gif" width="10%" class="img-center">
-<b> MATH</b>
+<b>   MATH</b>
 </p>
 
 
