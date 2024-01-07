@@ -8,9 +8,9 @@ author_profile: true
 
 
 
-<p>
+<p style="font-size: 20px;">
 <img src="/images/sitegif/math.gif" width="10%" class="img-center">
-在这里写你想显示的文本。
+<b> MATH</b>
 </p>
 
 
