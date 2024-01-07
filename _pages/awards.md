@@ -31,6 +31,7 @@ author_profile: true
 <img src="/images/sitegif/chess.gif" width="8%" class="img-center">
 <b>&emsp; Chess</b>
 </p>
+<hr style="border-width: 0.2px; color=gray">
 
 - 2020
 
