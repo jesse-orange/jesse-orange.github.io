@@ -48,7 +48,7 @@ author_profile: true
 <hr style="border-width: 0.1px; color=gray">
 
 <font size=5>
-<b>&emsp; Physics</b>
+<b>Physics</b>
 </font>
 - The 2nd prize in "Sui Yuan Cup" Nanjing city Middle School Physics Competition Grade 9, 2022
 - The 1st prize in "Sui Yuan Cup" Nanjing city Middle School Physics Competition Grade 8, 2021
