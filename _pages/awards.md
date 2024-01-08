@@ -5,8 +5,8 @@ permalink: /awards/
 author_profile: true
 ---
 
-<p style="font-size: 30px;">
-<img src="/images/sitegif/math.gif" width="8%" class="img-center">
+<p style="font-size: 25px;">
+<img src="/images/sitegif/math.gif" width="8%" class="img-bottom">
 <b>&emsp; MATH</b>
 </p>
 
@@ -16,8 +16,8 @@ author_profile: true
 <hr style="border-width: 0.1px; color=gray">
 
 
-<p style="font-size: 30px;">
-<img src="/images/sitegif/xiangqi.gif" width="8%" class="img-center">
+<p style="font-size: 25px;">
+<img src="/images/sitegif/xiangqi.gif" width="8%" class="img-top">
 <b>&emsp; Chinese Chess (Xiangqi, 中国象棋)</b>
 </p>
 
@@ -27,7 +27,7 @@ author_profile: true
 <hr style="border-width: 0.1px; color=gray">
 
 
-<p style="font-size: 30px;">
+<p style="font-size: 25px;">
 <img src="/images/sitegif/chess.gif" width="8%" class="img-center">
 <b>&emsp; Chess</b>
 </p>
