@@ -5,9 +5,10 @@ permalink: /honors/
 author_profile: true
 ---
 
-
+<font size=4>
 <img src="/images/sitegif/math.gif" width="8%" style="vertical-align: bottom;">
-<font size=4><b>&emsp; MATH</b></font>
+<b>&emsp; MATH</b>
+</font>
 
 - 2020
 
