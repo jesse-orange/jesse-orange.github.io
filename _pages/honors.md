@@ -14,6 +14,8 @@ author_profile: true
 - The top 5% on the American Mathematics Competition 10, 2023
 - Gold Certificate in UK Senior Mathematical Challenge, 2023
 - Certificate of High Distinction in Austurlian Mathematics Competition Intermediate Division, 2023
+- Th 1st prize in "Shi Dai Cup" Nanjing city Middle School Mathematics Competition Grade 8, 2021
+- The top 5% on the American Mathematics Competition 8, 2020
 
 
 
