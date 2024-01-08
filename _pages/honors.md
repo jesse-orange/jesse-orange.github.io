@@ -18,7 +18,7 @@ author_profile: true
 
 
 <div>
-<img src="/images/sitegif/xiangqi.gif" width="8%" vertical-align="top">
+<img src="/images/sitegif/xiangqi.gif" width="8%" vertical-align="top"> sjalfa;fj
 <b>&emsp; Chinese Chess (Xiangqi, 中国象棋)</b>
 </div>
 
