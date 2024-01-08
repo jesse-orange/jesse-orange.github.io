@@ -5,7 +5,7 @@ permalink: /honors/
 author_profile: true
 ---
 
-<font size=20>
+<font size=6>
 <img src="/images/sitegif/math.gif" width="8%" style="vertical-align: bottom;">
 <b>&emsp; MATH</b>
 </font>
