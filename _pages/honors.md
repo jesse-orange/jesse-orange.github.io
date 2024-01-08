@@ -11,8 +11,10 @@ author_profile: true
 </font>
 
 <br>
+- Certificate of High Distinction in Austurlian Mathematics Competition Intermediate Division, 2023
 - Gold Certificate in UK Senior Mathematical Challenge, 2023
 
+<br>
 <br>
 <hr style="border-width: 0.1px; color=gray">
 
