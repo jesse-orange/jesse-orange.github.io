@@ -18,8 +18,9 @@ author_profile: true
 
 <div style="vertical-align: top;">
     <img src="/images/sitegif/xiangqi.gif" width="8%">
-    <p>这里是文字内容。</p>
 </div>
+    <p>这里是文字内容。</p>
+
 
 <div>
 <img src="/images/sitegif/xiangqi.gif" width="8%" vertical-align="top"> Hello
