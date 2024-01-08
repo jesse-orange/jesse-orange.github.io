@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 
-<img src="/images/sitegif/math.gif" width="8%">
+<img src="/images/sitegif/math.gif" width="8%" style="vertical-align: bottom;">
 <p style="font-size: 20px;">
 <b>&emsp; MATH</b>
 </p>
@@ -26,13 +26,9 @@ author_profile: true
 <hr style="border-width: 0.1px; color=gray">
 
 
-<p style="font-size: 20px;">
-<img src="/images/sitegif/chess.gif" width="8%" align="right">
+
+<img src="/images/sitegif/chess.gif" width="8%" align="right" style="vertical-align: middle;">
 <b>&emsp; </b>
-Chess
-
-
-</p>
 
 - 2020
 
