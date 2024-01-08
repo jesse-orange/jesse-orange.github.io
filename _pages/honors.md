@@ -16,12 +16,11 @@ author_profile: true
 <br>
 <hr style="border-width: 0.1px; color=gray">
 
-<div style="vertical-align: top;">
-    <img src="/images/sitegif/xiangqi.gif" width="8%">
-</div>
-    <p>这里是文字内容。</p>
 
+<img src="/images/sitegif/xiangqi.gif" width="8%" style="vertical-align: top;">
+<p>这里是文字内容。</p>
 
+<br>
 <div>
 <img src="/images/sitegif/xiangqi.gif" width="8%" vertical-align="top"> Hello
 </div>
