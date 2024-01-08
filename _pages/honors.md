@@ -19,7 +19,7 @@ author_profile: true
 
 <div>
 <img src="/images/sitegif/xiangqi.gif" width="8%" vertical-align="middle">
-<p style="font-size: 20px;"><b>&emsp; Chinese Chess (Xiangqi, 中国象棋)</b>
+<b>&emsp; Chinese Chess (Xiangqi, 中国象棋)</b>
 </div>
 
 - 2020
