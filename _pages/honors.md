@@ -6,22 +6,22 @@ author_profile: true
 ---
 
 <font size=5>
-<b>&emsp; Xiangqi (Chinese Chess, 中国象棋)</b>
+<b>Xiangqi (Chinese Chess, 中国象棋)</b>
 </font>
 - The 4th place in Jiangsu province Junior Xiangqi Championships Boys Group A, 2023
 - The 1st place in "Qi Wang Cup" Nanjing city Children Xiangqi Competition Boys Group, 2018
-- The 16th place in China Junior Xiangqi Championships Boys Group D, 2017
+- The 16th place in National Junior Xiangqi Championships Boys Group D, 2017
 - The 2nd place in Jiangsu province Junior Xiangqi Championships Boys Group B, 2017
 - The 1st place in "Qi Wang Cup" Nanjing city Children Xiangqi Competition Boys Group, 2016
-- The 5th place in China Children Xiangqi Championships Boys Group D, 2015
+- The 5th place in National Children Xiangqi Championships Boys Group D, 2015
 - The 1st place in Jiangsu province Junior Xiangqi Championships Boys Group D, 2015
 - The 1st place in Nanjing city Children Xiangqi Competition Boys Group D, 2015
-- The 8th place in China Children Xiangqi Championships Boys Group D, 2014
+- The 8th place in National Children Xiangqi Championships Boys Group D, 2014
 
 <hr style="border-width: 0.1px; color=gray">
 
 <font size=5>
-<b>&emsp; Chess</b>
+<b>Chess</b>
 </font>
 
 - My USCF ([US Chess Federation](https://new.uschess.org)  ) Regular Rating is 1145 based on 24 games.
@@ -37,7 +37,7 @@ author_profile: true
 <hr style="border-width: 0.1px; color=gray">
 
 <font size=5>
-<b>&emsp; Math</b>
+<b>Math</b>
 </font>
 - The top 5% on the American Mathematics Competition 10, 2023
 - Gold Certificate in UK Senior Mathematical Challenge, 2023
@@ -52,6 +52,16 @@ author_profile: true
 </font>
 - The 2nd prize in "Sui Yuan Cup" Nanjing city Middle School Physics Competition Grade 9, 2022
 - The 1st prize in "Sui Yuan Cup" Nanjing city Middle School Physics Competition Grade 8, 2021
+
+<hr style="border-width: 0.1px; color=gray">
+
+<font size=5>
+<b>Speech and Debate</b>
+</font>
+- The 1st place in the 14th "FLTRP Cup" Nantional English Competition for schools, Jiangsu Regional Final, Group B, 2017 
+
+
+
 
 
 
