@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 <p style="font-size: 20px;">
-<img src="/images/sitegif/math.gif" width="8%" vertical-align="top">
+<img src="/images/sitegif/math.gif" width="8%" vertical-align=top>
 <b>&emsp; MATH</b>
 </p>
 
