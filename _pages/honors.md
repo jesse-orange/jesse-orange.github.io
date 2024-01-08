@@ -17,8 +17,9 @@ author_profile: true
 <hr style="border-width: 0.1px; color=gray">
 
 
+
+<img src="/images/sitegif/xiangqi.gif" width="8%" class="img-center">
 <p style="font-size: 20px;">
-<img src="/images/sitegif/xiangqi.gif" width="8%" class="img-top">
 <b>&emsp; Chinese Chess (Xiangqi, 中国象棋)</b>
 </p>
 
