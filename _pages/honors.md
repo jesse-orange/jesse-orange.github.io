@@ -25,7 +25,7 @@ author_profile: true
 
 
 
-<img src="/images/sitegif/chess.gif" width="8%" align="right" style="vertical-align: middle;">
+<img src="/images/sitegif/chess.gif" width="8%" style="vertical-align: middle;">
 <b>&emsp; Chess</b>
 
 - 2020
