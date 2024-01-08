@@ -18,7 +18,6 @@ author_profile: true
 - The 1st place in Nanjing city Children Xiangqi Competition Boys Group D, 2015
 - The 8th place in China Children Xiangqi Championships Boys Group D, 2014
 
-<br>
 <hr style="border-width: 0.1px; color=gray">
 
 <font size=5>
@@ -33,7 +32,6 @@ author_profile: true
 - The 2nd place in 2018 Queen's Quest Scholastic K-5 Championship, Madison, AL, US, 2018
 - The 1st place in 2018 Fall Scholars Non-Rated Section, Madison, AL, US, 2018
   
-<br>
 <hr style="border-width: 0.1px; color=gray">
 
 <font size=5>
@@ -45,7 +43,6 @@ author_profile: true
 - Th 1st prize in "Shi Dai Cup" Nanjing city Middle School Mathematics Competition Grade 8, 2021
 - The top 5% on the American Mathematics Competition 8, 2020
 
-<br>
 <hr style="border-width: 0.1px; color=gray">
 
 <font size=5>
