@@ -9,7 +9,6 @@ author_profile: true
 <b>&emsp; Chinese Chess (Xiangqi, 中国象棋)</b>
 </font>
 <br>
-
 - 2020
 
 
@@ -29,7 +28,6 @@ author_profile: true
 <font size=5>
 <b>&emsp; MATH</b>
 </font>
-
 <br>
 - The top 5% on the American Mathematics Competition 10, 2023
 - Gold Certificate in UK Senior Mathematical Challenge, 2023
