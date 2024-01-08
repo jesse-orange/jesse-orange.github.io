@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-# About me &nbsp; &nbsp; (![name](/images/sitelogo/favicon-32x32.png))
+# About me &nbsp; ![name](/images/sitelogo/favicon-32x32.png)![name](/images/sitelogo/favicon-32x32.png)
 
 
 <br>
