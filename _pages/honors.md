@@ -16,6 +16,10 @@ author_profile: true
 <br>
 <hr style="border-width: 0.1px; color=gray">
 
+<div style="display: flex;">
+    <img src="/images/sitegif/xiangqi.gif" width="8%">
+    <p>这里是文字内容。</p>
+</div>
 
 <div>
 <img src="/images/sitegif/xiangqi.gif" width="8%" vertical-align="top"> Hello
@@ -30,7 +34,7 @@ author_profile: true
 
 
 <p style="font-size: 20px;">
-<img src="/images/sitegif/chess.gif" width="8%" class="img-center">
+<img src="/images/sitegif/chess.gif" width="8%" align="right">
 <b>&emsp; </b>
 Chess
 
