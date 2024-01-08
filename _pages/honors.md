@@ -16,7 +16,7 @@ author_profile: true
 <br>
 <hr style="border-width: 0.1px; color=gray">
 
-<div style="display: flex;">
+<div style="vertical-align: top;">
     <img src="/images/sitegif/xiangqi.gif" width="8%">
     <p>这里是文字内容。</p>
 </div>
