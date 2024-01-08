@@ -1,12 +1,15 @@
 ---
 permalink: /
-title: "About Me"
+title: " "
 excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+
+# About me &nbsp; &nbsp; (![name](/images/sitelogo/favicon-32x32.png))
+
 
 <br>
 Hi, welcome to my website. I am Jixi Gu and you also can call me Jesse.
