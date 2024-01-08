@@ -24,8 +24,8 @@ author_profile: true
 <b>&emsp; Chess</b>
 </font>
 
-- My USCF( [US Chess Federation](https://new.uschess.org)  ) Regular Rating is 1145 based on 24 games.
-- My USCF(US Chess Federation) Quick Rating is 1005 based on 17 games.
+- My USCF ([US Chess Federation](https://new.uschess.org)  ) Regular Rating is 1145 based on 24 games.
+- My USCF (US Chess Federation) Quick Rating is 1005 based on 17 games.
 - The 28th place in National Elementary Championship K-5 Under 1200, Nashville, TN, US, 2019
 - The 15th place in ASSCC Team Championship Elementary (K-6) School, Fairfield, AL, US, 2019
 - The 10th place in 2019 Rookie Rally K-6 Championship, Huntsville, AL, 2019
