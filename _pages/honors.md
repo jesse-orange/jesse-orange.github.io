@@ -7,9 +7,7 @@ author_profile: true
 
 
 <img src="/images/sitegif/math.gif" width="8%" style="vertical-align: bottom;">
-<p style="font-size: 20px;">
 <b>&emsp; MATH</b>
-</p>
 
 - 2020
 
