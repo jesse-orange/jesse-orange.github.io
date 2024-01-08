@@ -10,6 +10,7 @@ author_profile: true
 <b>&emsp; MATH</b>
 </font>
 
+<br>
 - Gold Certificate in UK Senior Mathematical Challenge, 2023
 
 <br>
