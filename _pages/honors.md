@@ -6,11 +6,17 @@ author_profile: true
 ---
 
 <font size=5>
-<b>&emsp; Chinese Chess (Xiangqi, 中国象棋)</b>
+<b>&emsp; Xiangqi (Chinese Chess, 中国象棋)</b>
 </font>
-<br>
-- 2020
-
+- The 4th place in Jiangsu province Junior Xiangqi Championships Boys Group A, 2023
+- The 1st place in "Qi Wang Cup" Nanjing city Children Xiangqi Competition Boys Group, 2018
+- The 16th place in China Junior Xiangqi Championships Boys Group D, 2017
+- The 2nd place in Jiangsu province Junior Xiangqi Championships Boys Group B, 2017
+- The 1st place in "Qi Wang Cup" Nanjing city Children Xiangqi Competition Boys Group, 2016
+- The 5th place in China Children Xiangqi Championships Boys Group D, 2015
+- The 1st place in Jiangsu province Junior Xiangqi Championships Boys Group D, 2015
+- The 1st place in Nanjing city Children Xiangqi Competition Boys Group D, 2015
+- The 8th place in China Children Xiangqi Championships Boys Group D, 2014
 
 <br>
 <br>
