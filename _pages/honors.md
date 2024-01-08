@@ -58,6 +58,7 @@ author_profile: true
 <font size=5>
 <b>Speech and Debate</b>
 </font>
+- The best delegate in Phoenix Model United Nations Youth Summit, 2021
 - The 1st place in the 14th "FLTRP Cup" Nantional English Competition for schools, Jiangsu Regional Final, Primary School Group B, 2017 
 
 
