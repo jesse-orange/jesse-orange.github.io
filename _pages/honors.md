@@ -18,7 +18,7 @@ author_profile: true
 
 
 <img src="/images/sitegif/xiangqi.gif" width="8%" style="vertical-align: top;">
-这里是文字sfsfsadfasf内容。
+**这里是文字sfsfsadfasf内容**。
 
 
 <br>
