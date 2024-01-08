@@ -11,8 +11,11 @@ author_profile: true
 </font>
 
 <br>
-- Certificate of High Distinction in Austurlian Mathematics Competition Intermediate Division, 2023
+- The top 5% on the American Mathematics Competition 10, 2023
 - Gold Certificate in UK Senior Mathematical Challenge, 2023
+- Certificate of High Distinction in Austurlian Mathematics Competition Intermediate Division, 2023
+
+
 
 <br>
 <br>
