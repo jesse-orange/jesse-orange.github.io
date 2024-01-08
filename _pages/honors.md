@@ -5,8 +5,9 @@ permalink: /honors/
 author_profile: true
 ---
 
-<p style="font-size: 20px;">
+
 <img src="/images/sitegif/math.gif" width="8%">
+<p style="font-size: 20px;">
 <b>&emsp; MATH</b>
 </p>
 
