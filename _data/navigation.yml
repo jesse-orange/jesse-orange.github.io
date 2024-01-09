@@ -2,12 +2,12 @@
 main:
   - title: "Education"
     url: /education/    
-    
-  - title: "Activities"
-    url: /activities/
 
   - title: "Honors"
     url: /honors/
+    
+  - title: "Activities"
+    url: /activities/
 
   - title: "Research"
     url: /research/    
