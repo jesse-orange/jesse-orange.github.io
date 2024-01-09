@@ -7,6 +7,12 @@ author_profile: true
 
 <font size=5> <b>Xiangqi (Chinese Chess, 中国象棋)</b></font>
 
+- In 2023, I took part in "Mochou Lake Cup" Wangbin Club Month Competition in Nanjing, China;
+
+&emsp; <img src="/images/imagexq/xq202310.jpg" width="10%" hspace="49" >
+<img src="/images/imagexq/xq202311.jpg" width="15%" hspace="49" >
+<img src="/images/imagexq/xq202312.jpg" width="10%" hspace="49" >
+
 - In 2023, I took part in "Jinling Wu Xiang Cup" National Open Competition in Nanjing, China;
 
 &emsp; <img src="/images/imagexq/xq202307.jpg" width="15%" hspace="49" >
