@@ -5,6 +5,10 @@ permalink: /activities/
 author_profile: true
 ---
 
+<font size=5> <b>Speech and Debate</b></font>
+
+- In 2023, I gave a speech for the election of secretary of Student Union in Nanjing No.1 High School and at last I won the election victory.;
+
 <font size=5> <b>Xiangqi (Chinese Chess, 中国象棋)</b></font>
 
 - In 2023, I took part in "Mochou Lake Cup" Wangbin Club Month Competition in Nanjing, China;
