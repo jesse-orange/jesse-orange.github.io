@@ -9,7 +9,7 @@ author_profile: true
 
 - In 2023, I took part in Jiangsu Province Junior Xiangqi Championships Boys Group A in Changzhou, China;
 
-&emsp; <img src="/images/imagexq/xq202304.jpg" width="10%" hspace="49" >
+&emsp; <img src="/images/imagexq/xq202304.jpg" width="15%" hspace="49" >
 <img src="/images/imagexq/xq202306.jpg" width="15%" hspace="49" >
 <img src="/images/imagexq/xq202305.jpg" width="10%" hspace="49" >
 
