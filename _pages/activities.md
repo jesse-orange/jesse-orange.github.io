@@ -7,6 +7,10 @@ author_profile: true
 
 <font size=5> <b>Social welfare & Volunteer service</b></font>
 
+- In every year from 2019 to 2023, I used saving pocket money to fund 
+
+&emsp; <img src="/images/imgvolunteer/volunteer202301.jpg" width="14%" hspace="49" >
+
 - In 2023, I did volunteer services in Jiangning district library, Nanjing, China.
 
 &emsp; <img src="/images/imgvolunteer/volunteer202301.jpg" width="14%" hspace="49" >
