@@ -7,6 +7,11 @@ author_profile: true
 
 <font size=5> <b>Speech and Debate</b></font>
 
+- In 2023, I joined English Debate Club in my high school and my classmate and I participated in WeSchool Speech and Debate Association the 2023-2024 fall season tournament in December.
+
+&emsp; <img src="/images/imgdebate/debate202301.jpg" width="20%" hspace="49" >
+<img src="/images/imgdebate/debate202302.jpg" width="15%" hspace="49" >
+
 - In 2023, I gave a speech for the election of secretary of Student Union in Nanjing No.1 High School and at last I won the election victory.
 
 &emsp; <img src="/images/imgspeech/speech202301.jpg" width="20%" hspace="49" >
