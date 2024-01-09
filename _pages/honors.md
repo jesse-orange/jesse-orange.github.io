@@ -25,6 +25,14 @@ author_profile: true
 <hr style="border-width: 0.1px; color=gray">
 
 <font size=5>
+<b>Speech and Debate</b>
+</font>
+- The best delegate in Phoenix Model United Nations Youth Summit, 2021
+- The 1st place in the 14th "FLTRP Cup" Nantional English Competition for schools, Jiangsu Regional Final, Primary School Group B, 2017 
+
+<hr style="border-width: 0.1px; color=gray">
+
+<font size=5>
 <b>Xiangqi (Chinese Chess, 中国象棋)</b>
 </font>
 - The 4th place in Jiangsu province Junior Xiangqi Championships Boys Group A, 2023
@@ -52,13 +60,7 @@ author_profile: true
 - The 2nd place in 2018 Queen's Quest Scholastic K-5 Championship, Madison, AL, US, 2018
 - The 1st place in 2018 Fall Scholars Non-Rated Section, Madison, AL, US, 2018
 
-<hr style="border-width: 0.1px; color=gray">
 
-<font size=5>
-<b>Speech and Debate</b>
-</font>
-- The best delegate in Phoenix Model United Nations Youth Summit, 2021
-- The 1st place in the 14th "FLTRP Cup" Nantional English Competition for schools, Jiangsu Regional Final, Primary School Group B, 2017 
 
 
 
