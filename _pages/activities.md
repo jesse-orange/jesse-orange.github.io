@@ -5,7 +5,7 @@ permalink: /activities/
 author_profile: true
 ---
 
-<table style="border-collapse: collapse;">
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr>
         <th>列1</th>
         <th>列2</th>
