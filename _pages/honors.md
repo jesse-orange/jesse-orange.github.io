@@ -6,6 +6,25 @@ author_profile: true
 ---
 
 <font size=5>
+<b>Math</b>
+</font>
+- The top 5% on the American Mathematics Competition 10, 2023
+- Gold Certificate in UK Senior Mathematical Challenge, 2023
+- Certificate of High Distinction in Austurlian Mathematics Competition Intermediate Division, 2023
+- Th 1st prize in "Shi Dai Cup" Nanjing city Middle School Mathematics Competition Grade 8, 2021
+- The top 5% on the American Mathematics Competition 8, 2020
+
+<hr style="border-width: 0.1px; color=gray">
+
+<font size=5>
+<b>Physics</b>
+</font>
+- The 2nd prize in "Sui Yuan Cup" Nanjing city Middle School Physics Competition Grade 9, 2022
+- The 1st prize in "Sui Yuan Cup" Nanjing city Middle School Physics Competition Grade 8, 2021
+
+<hr style="border-width: 0.1px; color=gray">
+
+<font size=5>
 <b>Xiangqi (Chinese Chess, 中国象棋)</b>
 </font>
 - The 4th place in Jiangsu province Junior Xiangqi Championships Boys Group A, 2023
@@ -32,26 +51,6 @@ author_profile: true
 - The 6th place in 2019 Winter Knights Grade 5-6, Madison, AL, US, 2019
 - The 2nd place in 2018 Queen's Quest Scholastic K-5 Championship, Madison, AL, US, 2018
 - The 1st place in 2018 Fall Scholars Non-Rated Section, Madison, AL, US, 2018
-
- 
-<hr style="border-width: 0.1px; color=gray">
-
-<font size=5>
-<b>Math</b>
-</font>
-- The top 5% on the American Mathematics Competition 10, 2023
-- Gold Certificate in UK Senior Mathematical Challenge, 2023
-- Certificate of High Distinction in Austurlian Mathematics Competition Intermediate Division, 2023
-- Th 1st prize in "Shi Dai Cup" Nanjing city Middle School Mathematics Competition Grade 8, 2021
-- The top 5% on the American Mathematics Competition 8, 2020
-
-<hr style="border-width: 0.1px; color=gray">
-
-<font size=5>
-<b>Physics</b>
-</font>
-- The 2nd prize in "Sui Yuan Cup" Nanjing city Middle School Physics Competition Grade 9, 2022
-- The 1st prize in "Sui Yuan Cup" Nanjing city Middle School Physics Competition Grade 8, 2021
 
 <hr style="border-width: 0.1px; color=gray">
 
