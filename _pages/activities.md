@@ -9,7 +9,7 @@ author_profile: true
 
 - In 2019, I taught Chinese chess as a volunteer in Alabama Agricultural & Mechanical University, US.
 
-&emsp; <img src="/images/imgvolunteer/volunteer201901.jpg" width="16%" hspace="49" >
+&emsp; <img src="/images/imgvolunteer/volunteer201901.png" width="16%" hspace="49" >
 
 <hr style="border-width: 0.1px; color=gray">
 
