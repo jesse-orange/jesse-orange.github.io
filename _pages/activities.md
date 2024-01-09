@@ -7,6 +7,10 @@ author_profile: true
 
 <font size=5> <b>Social welfare & Volunteer service</b></font>
 
+- In 2023, I did volunteer services in Jiangning district library, Nanjing, China.
+
+&emsp; <img src="/images/imgvolunteer/volunteer201901.png" width="16%" hspace="49" >
+
 - In 2019, I taught Chinese chess as a volunteer in Alabama Agricultural & Mechanical University, US.
 
 &emsp; <img src="/images/imgvolunteer/volunteer201901.png" width="16%" hspace="49" >
