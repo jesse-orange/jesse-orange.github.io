@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Hobbies"
-permalink: /hobbies/
+title: "Education"
+permalink: /education/
 author_profile: true
 ---
