@@ -12,8 +12,8 @@ author_profile: true
  My website was built on Wordpress in 2021 and moved from Wordpress to Github in 2023.
 </div>
 
-<hr style="border-width: 0.1px; color=gray">
 <br>
+<hr style="border-width: 0.1px; color=gray">
 
 <font size=5> <b> &emsp; About my website</b></font>
 <br>
