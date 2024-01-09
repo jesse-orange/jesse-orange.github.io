@@ -5,7 +5,7 @@ permalink: /activities/
 author_profile: true
 ---
 
-<table border="0">
+<table border=0>
   <tr>
     <th>标题1</th>
     <th>标题2</th>
