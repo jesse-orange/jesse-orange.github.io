@@ -5,6 +5,12 @@ permalink: /activities/
 author_profile: true
 ---
 
+<font size=5> <b>Social welfare & Volunteer service</b></font>
+
+- In 2023, I joined English Debate Club in my high school and my classmate Xinbei Ji and I participated in WeSchool Speech and Debate Association the 2023-2024 fall season online tournament in December.
+
+<hr style="border-width: 0.1px; color=gray">
+
 <font size=5> <b>Speech & Debate</b></font>
 
 - In 2023, I joined English Debate Club in my high school and my classmate Xinbei Ji and I participated in WeSchool Speech and Debate Association the 2023-2024 fall season online tournament in December.
