@@ -5,18 +5,19 @@ permalink: /activities/
 author_profile: true
 ---
 
-<style>
-td, th {
-   border: none!important;
-}
-</style>
-
-
-| Time         | Length        | Speed              | Mass         |
-| ------------ | ------------- | ------------------ | ------------ |
-| -Millisecond | Millimetre    | Kilometre per hour | Milligram    |
-| Second       | Centimetre    | Foot per second    | Gram         |
-| Minute       | Inch          | Miles per hour     | Ounce        |
+<table style="border-collapse: collapse;">
+    <tr>
+        <th>列1</th>
+        <th>列2</th>
+        <th>列3</th>
+    </tr>
+    <tr>
+        <td>数据1</td>
+        <td>数据2</td>
+        <td>数据3</td>
+    </tr>
+    <!-- 添加更多行 -->
+</table>
 
 
 
