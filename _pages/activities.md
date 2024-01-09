@@ -13,6 +13,7 @@ author_profile: true
 </div>
 
 <hr style="border-width: 0.1px; color=gray">
+<br>
 
 <font size=5> <b> &emsp; About my website</b></font>
 <br>
