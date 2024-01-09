@@ -7,6 +7,12 @@ author_profile: true
 
 <font size=5> <b>Xiangqi (Chinese Chess, 中国象棋)</b></font>
 
+- In 2023, I took part in "Jinling Wu Xiang Cup" National Open Competition in Nanjing, China;
+
+&emsp; <img src="/images/imagexq/xq202307.jpg" width="15%" hspace="49" >
+<img src="/images/imagexq/xq202308.jpg" width="10%" hspace="49" >
+<img src="/images/imagexq/xq202309.jpg" width="15%" hspace="49" >
+
 - In 2023, I took part in Jiangsu Province Junior Xiangqi Championships Boys Group A in Changzhou, China;
 
 &emsp; <img src="/images/imagexq/xq202304.jpg" width="15%" hspace="49" >
