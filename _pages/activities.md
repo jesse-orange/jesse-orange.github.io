@@ -5,10 +5,10 @@ permalink: /activities/
 author_profile: true
 ---
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<table style="border:0px;border-spacing:0px;margin-right:auto;margin-left:auto;">
     <tr>
         <th>列1sdafasdfaf</th>
-        <th>列2</th>
+        <th>列2撒发生的发生</th>
         <th>列3</th>
     </tr>
     <tr>
