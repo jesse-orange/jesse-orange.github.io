@@ -6,6 +6,6 @@ author_profile: true
 ---
 
 <font size=5>
-  <img src="/images/websitepic.png" width="20%" style="vertical-align: top">
+  <img src="/images/websitepic.png" width="20%" style="vertical-align: top" hspace="20">
 <b>Math</b>
 </font>
