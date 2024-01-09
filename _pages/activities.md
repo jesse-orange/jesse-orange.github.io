@@ -7,7 +7,7 @@ author_profile: true
 
 <font size=5> <b>Social welfare & Volunteer service</b></font>
 
-- In every year from 2019 to 2023, I used saving pocket money to fund education of one poor child living in [Daliang Mountains](https://en.wikipedia.org/wiki/Daliang_Mountains) in Sichuan, China. I was very happy to know that my little contribution helped one girl fi
+- In every year from 2019 to 2023, I used saving pocket money to fund education of one poor child living in [Daliang Mountains](https://en.wikipedia.org/wiki/Daliang_Mountains) in Sichuan, China. I was very happy to know that my little contribution helped two girls finish elementary and middle school respectively.
 
 &emsp; <img src="/images/imgvolunteer/volunteer202301.jpg" width="14%" hspace="49" >
 
