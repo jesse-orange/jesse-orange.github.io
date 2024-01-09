@@ -7,9 +7,10 @@ author_profile: true
 
 <font size=5> <b>Xiangqi (Chinese Chess, 中国象棋</b></font>
 
-<img src="/images/imagexq/xq202201.jpg" width="15%" hspace="20" style="vertical-align: top">
-<img src="/images/imagexq/xq202202.jpg" width="15%" hspace="20" style="vertical-align: top">
-In 2022, I took part in Xiangqi Intercity Friendly Competition in Nanjing, China.
+- In 2022, I took part in Xiangqi Intercity Friendly Competition in Nanjing, China.
+<img src="/images/imagexq/xq202201.jpg" width="15%" hspace="20" >
+<img src="/images/imagexq/xq202202.jpg" width="15%" hspace="20" >
+
 
 <hr style="border-width: 0.1px; color=gray">
 
