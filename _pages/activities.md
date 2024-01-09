@@ -9,9 +9,9 @@ author_profile: true
 
 - In 2022, I took part in Xiangqi Intercity Friendly Competition in Nanjing, China.
   
-&emsp; <img src="/images/imagexq/xq202201.jpg" width="15%" hspace="49" >
-<img src="/images/imagexq/xq202202.jpg" width="15%" hspace="49" >
-<img src="/images/imagexq/xq202203.jpg" width="15%" hspace="49" >
+&emsp; <img src="/images/imagexq/xq202201.jpg" width="10%" hspace="49" >
+<img src="/images/imagexq/xq202202.jpg" width="10%" hspace="49" >
+<img src="/images/imagexq/xq202203.jpg" width="10%" hspace="49" >
 
 
 <hr style="border-width: 0.1px; color=gray">
