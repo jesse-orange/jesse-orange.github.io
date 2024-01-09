@@ -7,7 +7,6 @@ author_profile: true
 
 <div>
  <img src="/images/websitepic.png" width="20%" style="vertical-align: top" hspace="20">
- <img src="/images/websitepic.png" width="20%" style="vertical-align: top" hspace="20">
 </div>
 <div>
   <font size=6 color=green> <b>My website</b></font> 
