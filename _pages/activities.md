@@ -7,6 +7,12 @@ author_profile: true
 
 <font size=5> <b>Xiangqi (Chinese Chess, 中国象棋)</b></font>
 
+- In 2023, I took part in Jiangsu Province Junior Xiangqi Championships Boys Group A in Changzhou, China;
+
+&emsp; <img src="/images/imagexq/xq202304.jpg" width="10%" hspace="49" >
+<img src="/images/imagexq/xq202306.jpg" width="15%" hspace="49" >
+<img src="/images/imagexq/xq202305.jpg" width="10%" hspace="49" >
+
 - In 2023, I took part in National Junior Xiangqi Championships Boys Group A in Shenzhen, China;
 
 &emsp; <img src="/images/imagexq/xq202301.jpg" width="15%" hspace="49" >
