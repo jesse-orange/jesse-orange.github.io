@@ -9,8 +9,10 @@ author_profile: true
 
 - In 2023, I gave a speech for the election of secretary of Student Union in Nanjing No.1 High School and at last I won the election victory.
 
-&emsp; <img src="/images/imgspeech/speech202301.jpg" width="10%" hspace="49" >
+&emsp; <img src="/images/imgspeech/speech202301.jpg" width="20%" hspace="49" >
 <img src="/images/imgspeech/speech202302.jpg" width="15%" hspace="49" >
+
+<hr style="border-width: 0.1px; color=gray">
 
 <font size=5> <b>Xiangqi (Chinese Chess, 中国象棋)</b></font>
 
