@@ -18,7 +18,7 @@ I am currently a high school student in [Nanjing No.1 High School](https://en.wi
 
 My first name in Chinese is 缉熙 ( Jixi ).  My mother, who obtained a doctor of letters degree in ancient Chinese literature, told me that  “缉熙” comes from the “Da ya” (“Major Court Hymns” or “Greater Odes of the Kingdom”) section of [Shi Jing](https://en.wikipedia.org/wiki/Classic_of_Poetry) (Classic of Poetry), which collects poems or songs of praise for [Western Zhou Dynasty](https://en.wikipedia.org/wiki/Western_Zhou) (1046-771 BC), and this word means “bright” in ancient Chinese language and in Shi Jing  is used to glorify [King Wen of Zhou](https://en.wikipedia.org/wiki/King_Wen_of_Zhou), the founder of Western Zhou Dynasty and first epic hero of Chinese history. My Chinese nickname is 橙橙, which in English is "orange". When I asked my father, who had a doctor of engineering degree, why they gave me this name, he smiled mysteriously and said “Because I like to eat oranges” . 
 
-My hobbies are [Xiangqi](https://en.wikipedia.org/wiki/Xiangqi), chess, music, reading and travelling. My favourite hobby is playing Xiangqi, also commonly known as Chinese chess (中国象棋 in Chinese).
+My hobbies are [Xiangqi](https://en.wikipedia.org/wiki/Xiangqi), chess, music, reading and travelling. My favourite hobby is playing Xiangqi, also commonly known as Chinese chess (中国象棋 in Chinese). Ever since my father had bought a Xiangqi set for me from the supermaket at my 4 years old, I have been deeply fascinated by Xiangqi.
 
 
 
