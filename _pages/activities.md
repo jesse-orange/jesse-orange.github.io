@@ -9,7 +9,7 @@ author_profile: true
 
 <img src="/images/imagexq/xq202201.jpg" width="15%" hspace="20" style="vertical-align: top">
 <img src="/images/imagexq/xq202202.jpg" width="15%" hspace="20" style="vertical-align: top">
-I took part in Xiangqi Intercity Friendly Competition in 2022.
+In 2022, I took part in Xiangqi Intercity Friendly Competition in Nanjing, China.
 
 <hr style="border-width: 0.1px; color=gray">
 
