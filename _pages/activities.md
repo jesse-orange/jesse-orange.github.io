@@ -7,8 +7,8 @@ author_profile: true
 
 <font size=5> <b>Xiangqi (Chinese Chess, 中国象棋</b></font>
 
-<img align="left" src="/images/imagexq/XQ202201.jpg" width="20%" hspace="20">
-<img align="left" src="/images/imagexq/XQ202202.jpg" width="20%" hspace="20">
+<img align="left" src="/images/imagexq/xq202201.jpg" width="20%" hspace="20">
+<img align="left" src="/images/imagexq/xq202202.jpg" width="20%" hspace="20">
 
 
 <hr style="border-width: 0.1px; color=gray">
