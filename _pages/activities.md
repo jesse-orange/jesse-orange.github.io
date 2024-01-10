@@ -9,7 +9,11 @@ author_profile: true
 
 - In every year from 2019 to 2023, I used saving pocket money to fund education of one poor child living in [Daliang Mountains](https://en.wikipedia.org/wiki/Daliang_Mountains) in Sichuan, China. I was very happy to know that my little contribution helped two girls finish elementary and middle school respectively.
 
-&emsp; <img src="/images/imgvolunteer/volunteer202301.jpg" width="14%" hspace="49" >
+&emsp; <img src="/images/imgwelfare/welfare01.jpg" width="21%" hspace="49" >
+<img src="/images/imgwelfare/welfare02.jpg" width="21%" hspace="49" >
+<img src="/images/imgwelfare/welfare03.jpg" width="21%" hspace="49" >
+
+&emsp; <img src="/images/imgwelfare/welfare04.jpg" width="21%" hspace="49" >
 
 - In 2023, I did volunteer services in Jiangning district library, Nanjing, China.
 
