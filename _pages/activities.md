@@ -43,7 +43,7 @@ author_profile: true
 
 &emsp; <img src="/images/imgdebate/debate202101.png" width="15%" hspace="21" >
 <img src="/images/imgdebate/debate202102.png" width="14%" hspace="21" >
-<img src="/images/imgdebate/debate202103.png" width="14%" hspace="421" >
+<img src="/images/imgdebate/debate202103.png" width="14%" hspace="21" >
 
 <hr style="border-width: 0.1px; color=gray">
 
