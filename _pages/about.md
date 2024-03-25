@@ -18,7 +18,7 @@ My first name in Chinese is 缉熙 ( Jixi ).  My mother, who obtained a doctor o
 
 In my spare time, I enjoy playing [Xiangqi](https://en.wikipedia.org/wiki/Xiangqi) or chess, music, reading and travelling. My favourite hobby is Xiangqi, also commonly known as Chinese chess (中国象棋 in Chinese). Ever since my father had bought a Xiangqi set for me from the supermaket at my four years old, I have been deeply fascinated by Xiangqi. [Zhang Guofeng](https://www.xqinenglish.com/index.php?option=com_content&view=article&id=218:china-zhang-guofeng&catid=172&Itemid=526&lang=en), a female Xiangqi GM (Grandmaster), taught me Xiangqi since I was five, and she is not only my teacher but also my very good friend. 
 
-I am currently a high school student in [Nanjing No.1 High School](https://en.wikipedia.org/wiki/Nanjing_No.1_High_School), China. I am the monitor of class AP1, grade 9, and the secretary of Student Union.  
+I am currently a high school student in [Nanjing No.1 High School](https://en.wikipedia.org/wiki/Nanjing_No.1_High_School), China. I am the monitor of class AP1 and the secretary of Student Union.  
 
 
 
