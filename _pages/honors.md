@@ -8,6 +8,7 @@ author_profile: true
 <font size=5>
 <b>Math</b>
 </font>
+- My name in International Student Honor Roll of Canadian Euclid Mathematics Contest, 2024
 - High Distinction (Top 10%) in Junior Level of Youth Math Talent Competency Evaluation, 2024
 - The top 5% on the American Mathematics Competition 10, 2023
 - Gold prize in UK Senior Mathematical Challenge, 2023
