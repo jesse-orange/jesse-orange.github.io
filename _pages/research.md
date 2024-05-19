@@ -9,7 +9,6 @@ author_profile: true
 
 <br>
 
-
 <font size=5>
 <b>Film Review</b>
 </font>
