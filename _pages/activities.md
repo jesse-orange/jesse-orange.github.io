@@ -15,7 +15,7 @@ author_profile: true
 
 &emsp; <img src="/images/imgwelfare/welfare04.jpg" width="21%" hspace="21" >
 
-- In 2023, I participated in the city promotion acitvity Called "Nanjing Week".
+- In 2023, I participated in the city promotion acitvity Called "[Nanjing Week](https://en.wikipedia.org/wiki/Nanjing_Week)".
 
 &emsp; <img src="/images/imgwelfare/welfare05.jpg" width="14%" hspace="21" >
 
