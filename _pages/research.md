@@ -9,8 +9,14 @@ author_profile: true
 
 <br>
 
-# Coming soon ......
 
+<font size=5>
+<b>Projects</b>
+</font>
+
+Coming soon ......
+
+<hr style="border-width: 0.1px; color=gray">
 
 
 
