@@ -17,6 +17,8 @@ author_profile: true
 
 - In 2023, I participated in the city promotion acitvity Called "Nanjing Week".
 
+&emsp; <img src="/images/imgwelfare/welfare05.jpg" width="14%" hspace="21" >
+
 - In 2023, I did volunteer services in Jiangning district library, Nanjing, China.
 
 &emsp; <img src="/images/imgvolunteer/volunteer202301.jpg" width="14%" hspace="21" >
