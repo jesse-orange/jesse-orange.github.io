@@ -15,6 +15,10 @@ author_profile: true
 
 &emsp; <img src="/images/imgwelfare/welfare04.jpg" width="21%" hspace="21" >
 
+- In 2024, I completed the Nanjing Charity Walk around the [Nanjing City Wall](https://en.wikipedia.org/wiki/City_Wall_of_Nanjing).
+
+&emsp; <img src="/images/imgwelfare/welfare06.jpg"  width="14%" hspace="21" >
+
 - In 2023, I took part in the city promotion acitvity called "[Nanjing Week](https://en.wikipedia.org/wiki/Nanjing_Week)".
 
 &emsp; <img src="/images/imgwelfare/welfare05.jpg" width="14%" hspace="21" >
