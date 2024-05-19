@@ -8,6 +8,7 @@ author_profile: true
 <font size=5>
 <b>Math</b>
 </font>
+- High Distinction (Top 10%) in Junior Level of Youth Math Talent Competency Evaluation, 2024
 - The top 5% on the American Mathematics Competition 10, 2023
 - Gold prize in UK Senior Mathematical Challenge, 2023
 - High Distinction in Austurlian Mathematics Competition Intermediate Division, 2023
@@ -19,6 +20,7 @@ author_profile: true
 <font size=5>
 <b>Physics</b>
 </font>
+- National Silver (Division 1) in the Thirty-Eighth Annual AAPT PhysicsBowl Contest, 2024
 - The 2nd prize in "Sui Yuan Cup" Nanjing city Middle School Physics Competition Grade 9, 2022
 - The 1st prize in "Sui Yuan Cup" Nanjing city Middle School Physics Competition Grade 8, 2021
 
