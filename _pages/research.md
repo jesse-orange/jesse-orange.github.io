@@ -11,18 +11,9 @@ author_profile: true
 
 
 <font size=5>
-<b>Projects</b>
+<b>Film Review</b>
 </font>
 
-- Coming soon ......
-
-<hr style="border-width: 0.1px; color=gray">
-
-<font size=5>
-<b>Publications</b>
-</font>
-
-Coming soon ......
 
 
 
