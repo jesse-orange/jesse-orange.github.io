@@ -61,6 +61,10 @@ author_profile: true
 
 <font size=5> <b>Xiangqi (Chinese Chess, 中国象棋)</b></font>
 
+- In 2024, I took part in 4th World Xiangqi Open in University College Dublin, Ireland;
+
+&emsp; <img src="/images/imagexq/xq202401.jpg" width="10%" hspace="21" >
+
 - In 2023, I took part in "Mochou Lake Cup" Wangbin Club Month Competition in Nanjing, China;
 
 &emsp; <img src="/images/imagexq/xq202310.jpg" width="10%" hspace="21" >
