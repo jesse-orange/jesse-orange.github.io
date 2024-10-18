@@ -39,6 +39,15 @@ author_profile: true
 
 <hr style="border-width: 0.1px; color=gray">
 
+<font size=5> <b>Academic Activities</b></font>
+
+- In 2024. I took part in Youth Math Talent Boot Camp in Beijing, China.
+
+&emsp; <img src="/images/imgdebate/debate202302.jpg" width="16%" hspace="21" >
+<img src="/images/imgdebate/debate202301.jpg" width="16%" hspace="21" >  
+
+<hr style="border-width: 0.1px; color=gray">
+
 <font size=5> <b>Speech & Debate</b></font>
 
 - In 2023, I joined English Debate Club in my high school and my classmate Xinbei Ji and I participated in WeSchool Speech and Debate Association the 2023-2024 fall season online tournament in December.
