@@ -12,7 +12,7 @@ author_profile: true
 &emsp; <img src="/images/imagesacademic/academic202401.jpg" width="16%" hspace="21" >
 <img src="/images/imagesacademic/academic202402.jpg" width="16%" hspace="21" >  
 
-- <font color='Orange'> Please see </font> [Honors](https://jesse-orange.github.io/honors/) and Research \color{for more academic activities.}
+- <font size=5 color='Orange'> Please see [Honors](https://jesse-orange.github.io/honors/) and Research for more academic activities.</font> 
 
 <hr style="border-width: 0.1px; color=gray">
 
