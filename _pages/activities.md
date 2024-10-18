@@ -14,9 +14,9 @@ author_profile: true
 
 - In 2024, I attended the course: Machine Learning and Data Analysis in the Innovative Talents Science Training Program from March 8th, to May 26th.
 
-&emsp; <img src="/images/imagesacademic/academic202403.jpg" width="16%" hspace="21" >
-<img src="/images/imagesacademic/academic202404.jpg" width="16%" hspace="21" >  
-<img src="/images/imagesacademic/academic202405.jpg" width="16%" hspace="21" >  
+&emsp; <img src="/images/imagesacademic/academic202403.jpg" width="15%" hspace="21" >
+<img src="/images/imagesacademic/academic202404.jpg" width="15%" hspace="21" >  
+<img src="/images/imagesacademic/academic202405.jpg" width="15%" hspace="21" >  
 
 &emsp; <font size=4 color='Orange'>Please see</font> [Honors page](https://jesse-orange.github.io/honors/) <font color='Orange'>and</font> [Research page](https://jesse-orange.github.io/research/) <font color='Orange'>for more academic activities.</font>
 
