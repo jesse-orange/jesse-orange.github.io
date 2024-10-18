@@ -43,8 +43,8 @@ author_profile: true
 
 - In 2024. I took part in Youth Math Talent Boot Camp in Beijing, China.
 
-&emsp; <img src="/images/imgdebate/debate202302.jpg" width="16%" hspace="21" >
-<img src="/images/imgdebate/debate202301.jpg" width="16%" hspace="21" >  
+&emsp; <img src="/images/imageacademic/academic202401.jpg" width="16%" hspace="21" >
+<img src="/images/imageacademic/academic202402.jpg" width="16%" hspace="21" >  
 
 <hr style="border-width: 0.1px; color=gray">
 
