@@ -7,10 +7,16 @@ author_profile: true
 
 <font size=5> <b>Academic Activities</b></font>
 
-- In 2024. I took part in Youth Math Talent Boot Camp in Beijing, China.
+- In 2024, I took part in Youth Math Talent Boot Camp in Beijing, China.
 
 &emsp; <img src="/images/imagesacademic/academic202401.jpg" width="16%" hspace="21" >
 <img src="/images/imagesacademic/academic202402.jpg" width="16%" hspace="21" >  
+
+- In 2024, I attended the course: Machine Learning and Data Analysis in the Innovative Talents Science Training Program from March 8th, to May 26th.
+
+&emsp; <img src="/images/imagesacademic/academic202403.jpg" width="16%" hspace="21" >
+<img src="/images/imagesacademic/academic202404.jpg" width="16%" hspace="21" >  
+<img src="/images/imagesacademic/academic202405.jpg" width="16%" hspace="21" >  
 
 &emsp; <font size=4 color='Orange'>Please see</font> [Honors page](https://jesse-orange.github.io/honors/) <font color='Orange'>and</font> [Research page](https://jesse-orange.github.io/research/) <font color='Orange'>for more academic activities.</font>
 
