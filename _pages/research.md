@@ -14,6 +14,7 @@ author_profile: true
   - Course Transcript [PDF](https://jesse-orange.github.io/filepdf/Transcript202401.pdf)
   - paper 
 
+<hr style="border-width: 0.1px; color=gray">
 
 <font size=5>
 <b>Film Review</b>
