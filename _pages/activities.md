@@ -9,8 +9,8 @@ author_profile: true
 
 - In 2024. I took part in Youth Math Talent Boot Camp in Beijing, China.
 
-&emsp; <img src="/images/imageacademic/academic202401.jpg" width="16%" hspace="21" >
-<img src="/images/imageacademic/academic202402.jpg" width="16%" hspace="21" >  
+&emsp; <img src="/images/imagesacademic/academic202401.jpg" width="16%" hspace="21" >
+<img src="/images/imagesacademic/academic202402.jpg" width="16%" hspace="21" >  
 
 <hr style="border-width: 0.1px; color=gray">
 
@@ -73,7 +73,7 @@ author_profile: true
 - In 2024, I took part in [4th World Xiangqi Open](https://www.wxf-xiangqi.org/index.php?option=com_content&view=article&id=1729&Itemid=410&lang=en) in University College Dublin, Ireland;
 
 &emsp; <img src="/images/imagexq/xq202401.jpg" width="20%" hspace="21" >
-<img src="/images/imagexq/xq202402.jpg" width="10%" hspace="21" >
+<img src="/images/imagexq/xq202402.jpg" width="15%" hspace="21" >
 
 - In 2023, I took part in "Mochou Lake Cup" Wangbin Club Month Competition in Nanjing, China;
 
