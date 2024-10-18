@@ -10,8 +10,9 @@ author_profile: true
 </font>
 - In 2024, I attend the course: Machine Learning and Data Analysis in the Innovative Talents Science Training Program from March 8th, to May 26th. Based on what was learned in this course, I designed a new black-winged kit optimization algorithm based feature selection method for sign language recognition.
 
-  - Certificate of Course Completion [PDF](https://jesse-orange.github.io/filepdf/Certificate of Completion.pdf)
+  - Certificate of Course Completion [PDF](https://jesse-orange.github.io/filepdf/Certificate202401.pdf)
   - Course Transcript [PDF](https://jesse-orange.github.io/filepdf/Transcript202401.pdf)
+  - paper 
 
 
 <font size=5>
