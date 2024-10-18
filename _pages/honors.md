@@ -8,6 +8,10 @@ author_profile: true
 <font size=5>
 <b>Math</b>
 </font>
+
+- The Top 12 of Individual Performance in Junior Level of Youth Math Talent Boot Camp, 2024
+- Distinction of Individual Performance in Junior Level of Youth Math Talent Boot Camp, 2024
+- Distinction of Team Performance in Junior Level of Youth Math Talent Boot Camp, 2024
 - My name in International Student Honor Roll of Canadian Euclid Mathematics Contest, 2024
 - High Distinction (Top 10%) in Junior Level of Youth Math Talent Competency Evaluation, 2024
 - The top 5% on the American Mathematics Competition 10, 2023
@@ -52,8 +56,9 @@ author_profile: true
 <font size=5>
 <b>Xiangqi (Chinese Chess, 中国象棋)</b>
 </font>
+- The 5th place in World Xiangqi Open Men's U18, Dublin, Ireland, August, 2024
 - The 4th place in Jiangsu province Junior Xiangqi Championships Boys Group A, 2023
-- The 1st place in "Qi Wang Cup" Nanjing city Children Xiangqi Competition Boys Group, 2018
+- The 1st place in "Qi Wang Cup" Nanjing city Children Xiangqi Competition, Boys Group, 2018
 - The 16th place in National Junior Xiangqi Championships Boys Group D, 2017
 - The 2nd place in Jiangsu province Junior Xiangqi Championships Boys Group B, 2017
 - The 1st place in "Qi Wang Cup" Nanjing city Children Xiangqi Competition Boys Group, 2016
