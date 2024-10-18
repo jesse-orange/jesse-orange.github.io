@@ -56,7 +56,7 @@ author_profile: true
 <font size=5>
 <b>Xiangqi (Chinese Chess, 中国象棋)</b>
 </font>
-- The 5th place in World Xiangqi Open Men's U18, Dublin, Ireland, August, 2024
+- The 5th place in World Xiangqi Open Men's U18, University College Dublin, Ireland, August, 2024
 - The 4th place in Jiangsu province Junior Xiangqi Championships Boys Group A, 2023
 - The 1st place in "Qi Wang Cup" Nanjing city Children Xiangqi Competition, Boys Group, 2018
 - The 16th place in National Junior Xiangqi Championships Boys Group D, 2017
