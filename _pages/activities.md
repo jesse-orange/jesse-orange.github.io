@@ -21,13 +21,13 @@ author_profile: true
 <br>
 &emsp; ⭐⭐⭐⭐⭐⭐⭐ 
 
-&emsp; <font size=4 color='Orange'>Please see</font> [Honors page](https://jesse-orange.github.io/honors/) <font color='Orange'>and</font> [Research page](https://jesse-orange.github.io/research/) <font color='Orange'>for more academic activities.</font>
+&emsp; <font size=4 color='Orange'>Please see</font> [Honors page](https://jesse-orange.github.io/honors/){:target="_blank"} <font color='Orange'>and</font> [Research page](https://jesse-orange.github.io/research/){:target="_blank"} <font color='Orange'>for more academic activities.</font>
 
 <hr style="border-width: 0.1px; color=gray">
 
 <font size=5> <b>Social welfare & Volunteer service</b></font>
 
-- In every year from 2019 to 2023, I used saving pocket money to fund education of one poor child living in [Daliang Mountains](https://en.wikipedia.org/wiki/Daliang_Mountains) in Sichuan, China. I was very happy to know that my little contribution had already helped two girls finish elementary and middle school respectively.
+- In every year from 2019 to 2023, I used saving pocket money to fund education of one poor child living in [Daliang Mountains](https://en.wikipedia.org/wiki/Daliang_Mountains){:target="_blank"} in Sichuan, China. I was very happy to know that my little contribution had already helped two girls finish elementary and middle school respectively.
 
 &emsp; <img src="/images/imgwelfare/welfare01.jpg" width="21%" hspace="17" >
 <img src="/images/imgwelfare/welfare02.jpg" width="21%" hspace="17" >
@@ -35,11 +35,11 @@ author_profile: true
 
 &emsp; <img src="/images/imgwelfare/welfare04.jpg" width="21%" hspace="21" >
 
-- In 2024, I completed the Nanjing Charity Walk around the [Nanjing City Wall](https://en.wikipedia.org/wiki/City_Wall_of_Nanjing).
+- In 2024, I completed the Nanjing Charity Walk around the [Nanjing City Wall](https://en.wikipedia.org/wiki/City_Wall_of_Nanjing){:target="_blank"}.
 
 &emsp; <img src="/images/imgwelfare/welfare06.jpg"  width="14%" hspace="21" >
 
-- In 2023, I took part in the city promotion acitvity called "[Nanjing Week](https://en.wikipedia.org/wiki/Nanjing_Week)".
+- In 2023, I took part in the city promotion acitvity called "[Nanjing Week](https://en.wikipedia.org/wiki/Nanjing_Week){:target="_blank"}".
 
 &emsp; <img src="/images/imgwelfare/welfare05.jpg" width="14%" hspace="21" >
 
@@ -81,7 +81,7 @@ author_profile: true
 
 <font size=5> <b>Xiangqi (Chinese Chess, 中国象棋)</b></font>
 
-- In 2024, I took part in [4th World Xiangqi Open](https://www.wxf-xiangqi.org/index.php?option=com_content&view=article&id=1729&Itemid=410&lang=en) in University College Dublin, Ireland;
+- In 2024, I took part in [4th World Xiangqi Open](https://www.wxf-xiangqi.org/index.php?option=com_content&view=article&id=1729&Itemid=410&lang=en){:target="_blank"} in University College Dublin, Ireland;
 
 &emsp; <img src="/images/imagexq/xq202401.jpg" width="20%" hspace="21" >
 <img src="/images/imagexq/xq202402.jpg" width="15%" hspace="21" >
