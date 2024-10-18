@@ -5,6 +5,15 @@ permalink: /activities/
 author_profile: true
 ---
 
+<font size=5> <b>Academic Activities</b></font>
+
+- In 2024. I took part in Youth Math Talent Boot Camp in Beijing, China.
+
+&emsp; <img src="/images/imageacademic/academic202401.jpg" width="16%" hspace="21" >
+<img src="/images/imageacademic/academic202402.jpg" width="16%" hspace="21" >  
+
+<hr style="border-width: 0.1px; color=gray">
+
 <font size=5> <b>Social welfare & Volunteer service</b></font>
 
 - In every year from 2019 to 2023, I used saving pocket money to fund education of one poor child living in [Daliang Mountains](https://en.wikipedia.org/wiki/Daliang_Mountains) in Sichuan, China. I was very happy to know that my little contribution had already helped two girls finish elementary and middle school respectively.
@@ -39,15 +48,6 @@ author_profile: true
 
 <hr style="border-width: 0.1px; color=gray">
 
-<font size=5> <b>Academic Activities</b></font>
-
-- In 2024. I took part in Youth Math Talent Boot Camp in Beijing, China.
-
-&emsp; <img src="/images/imageacademic/academic202401.jpg" width="16%" hspace="21" >
-<img src="/images/imageacademic/academic202402.jpg" width="16%" hspace="21" >  
-
-<hr style="border-width: 0.1px; color=gray">
-
 <font size=5> <b>Speech & Debate</b></font>
 
 - In 2023, I joined English Debate Club in my high school and my classmate Xinbei Ji and I participated in WeSchool Speech and Debate Association the 2023-2024 fall season online tournament in December.
@@ -72,7 +72,7 @@ author_profile: true
 
 - In 2024, I took part in [4th World Xiangqi Open](https://www.wxf-xiangqi.org/index.php?option=com_content&view=article&id=1729&Itemid=410&lang=en) in University College Dublin, Ireland;
 
-&emsp; <img src="/images/imagexq/xq202401.jpg" width="10%" hspace="21" >
+&emsp; <img src="/images/imagexq/xq202401.jpg" width="20%" hspace="21" >
 <img src="/images/imagexq/xq202402.jpg" width="10%" hspace="21" >
 
 - In 2023, I took part in "Mochou Lake Cup" Wangbin Club Month Competition in Nanjing, China;
