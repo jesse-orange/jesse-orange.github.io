@@ -14,7 +14,7 @@ author_profile: true
 
 - <font color='Orange'>Please see</font> [Honors page](https://jesse-orange.github.io/honors/) <font color='Orange'>and</font> [Research page](https://jesse-orange.github.io/research/) <font color='Orange'>for more academic activities.</font>
 
-&emsp; <font color='Orange>Please see</font> [Honors page](https://jesse-orange.github.io/honors/) <font color='Orange'>and</font> [Research page](https://jesse-orange.github.io/research/) <font color='Orange'>for more academic activities.</font>
+&emsp; <font color='Orange'>Please see</font> [Honors page](https://jesse-orange.github.io/honors/) <font color='Orange'>and</font> [Research page](https://jesse-orange.github.io/research/) <font color='Orange'>for more academic activities.</font>
 
 <hr style="border-width: 0.1px; color=gray">
 
