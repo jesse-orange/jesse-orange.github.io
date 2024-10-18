@@ -6,9 +6,13 @@ author_profile: true
 ---
 
 <font size=5>
-<b>Machine Learning and Data Analysis</b>
+<b>Sign Language Recognition</b>
 </font>
-- In 2024, I attend the course: Machine Learning and Data Analysis in the Innovative Talents Science Training Program from March 8th, to May 26th. 
+- In 2024, I attend the course: Machine Learning and Data Analysis in the Innovative Talents Science Training Program from March 8th, to May 26th. Based on what was learned in this course, I designed a new black-winged kit optimization algorithm based feature selection method for sign language recognition.
+
+  - Course Transcript [PDF](https://)
+  - 
+
 
 <font size=5>
 <b>Film Review</b>
