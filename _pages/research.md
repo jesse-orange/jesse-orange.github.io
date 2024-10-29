@@ -12,7 +12,7 @@ author_profile: true
 
   - Certificate of Course Completion [PDF](https://jesse-orange.github.io/filepdf/Certificate202401.pdf){:target="_blank"}
   - Course Transcript [PDF](https://jesse-orange.github.io/filepdf/Transcript202401.pdf){:target="_blank"}
-  - Jixi Gu, [Sign language recognition using feature selection based on binary black-winged kite optimization algorithm](https://www.ijert.org/sign-language-recognition-using-feature-selection-based-on-binary-black-winged-kite-optimization-algorithm). International Journal of Engineering Research & Technology, Volume 13, Issue 10, October 2024. [PDF](https://www.ijert.org/research/sign-language-recognition-using-feature-selection-based-on-binary-black-winged-kite-optimization-algorithm-IJERTV13IS100090.pdf), [Certificate of Publication](https://jesse-orange.github.io/filepdf/IJERT_Certi_202401.pdf)
+  - Jixi Gu, [Sign language recognition using feature selection based on binary black-winged kite optimization algorithm](https://www.ijert.org/sign-language-recognition-using-feature-selection-based-on-binary-black-winged-kite-optimization-algorithm). International Journal of Engineering Research & Technology, Volume 13, Issue 10, October 2024. ( [PDF](https://www.ijert.org/research/sign-language-recognition-using-feature-selection-based-on-binary-black-winged-kite-optimization-algorithm-IJERTV13IS100090.pdf) ), ( [Certificate of Publication](https://jesse-orange.github.io/filepdf/IJERT_Certi_202401.pdf) )
 
 <hr style="border-width: 0.1px; color=gray">
 
