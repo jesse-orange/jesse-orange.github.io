@@ -23,7 +23,7 @@ author_profile: true
 
   - Jixi Gu, Spatial narrative and critique of reality in the American film "_Breaking_". _International Journal of Social Science and Human Research_, Volume 07, Issue 05, May 2024.  ( [PDF](https://www.ijsshr.in/v7i5/Doc/70.pdf){:target="_blank"} ), ( [DOI](https://doi.org/10.47191/ijsshr/v7-i05-70){:target="_blank"}, [Zenodo](https://zenodo.org/records/11230712){:target="_blank"}, [Linkedin](https://www.linkedin.com/posts/ijsshr-journal-a4033a19a_spatial-narrative-and-critique-of-reality-activity-7198585709174149123-QQ4Z?utm_source=share&utm_medium=member_desktop){:target="_blank"}, [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=2GnVaf4AAAAJ&sortby=pubdate&citation_for_view=2GnVaf4AAAAJ:MTuJV9umhWMC){:target="_blank"}, [Copernicus](https://journals.indexcopernicus.com/search/article?articleId=3905616){:target="_blank"}, [ResearchGate](https://www.researchgate.net/publication/380804667_Spatial_Narrative_and_Critique_of_Reality_in_The_American_Film_Breaking) )
 
-- [games](https://jesse-orange.github.io/games/mixedchess/index.html)(testing)
+
 
 
 
