@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>揭棋人机对弈系统</title>
+	<link rel="stylesheet" type="text/css" href="src/css/index.css">
+	<link rel="stylesheet" type="text/css" href="src/css/inject.css">
+</head>
+<body>
+	<div class="box" id="box">
+		<div class="chess_left">
+			<canvas id="chess">sorry~您的浏览器版本过低，建议使用firefox或者chrome浏览器！</canvas>
+			<div class="btn_box" id="btnBox">
+				<input type="button" name="intro" id="intro" value="游戏说明" onclick="document.getElementById('gameInfo').style.display='flex'">
+				<select style="display: none;" id="board" name="board">
+					<option value="initMap0">默认棋局</option>
+				</select>
+				<div class="b"></div>
+				<input type="button" name="offensivePlay" id="tyroPlay" value="新手水平">
+				<input type="button" name="offensivePlay" id="normalPlay" value="普通水平">
+				<input type="button" name="offensivePlay" id="superPlay" value="大师水平">
+				<input type="button" name="regret" id="regretBtn" value="悔棋">
+			</div>
+		</div>
+	</div>
+	<div id="gameInfo" class="game_info" onclick="this.style.display='none'">
+		<h2>游戏说明</h2>
+		<div>
+			<p>1.你将和AI进行对战，你一直是先手，AI只支持后手</p>
+			<p>2.请先选好棋局再点击难度</p>
+			<p>编写于2024年4月</p>
+		</div>
+	</div>
+	<div id="moveInfo" class="move_info"></div>
+	<div id="proj_info" class="proj_info">
+		<span>
+			
+			<a >
+			By B20030715, 2024.
+		</span>
+	</div>
+	<script type="text/javascript" src="src/js/common.js"></script>
+	<script type="text/javascript" src="src/js/play.js"></script>
+	<script type="text/javascript" src="src/js/AI.js"></script>
+	<script type="text/javascript" src="src/data/gambit.js"></script>
+</body>
+</html>
