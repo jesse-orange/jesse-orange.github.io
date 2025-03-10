@@ -8,7 +8,12 @@ author_profile: true
 <font size=5>
 <b>Math</b>
 </font>
-
+- A score of 11 on American Invitational Mathematics Examination, 2025
+- Certificate of Merit in British Mathematical Olympiad Round 2, 2025
+- Certificate of Merit in British Mathematical Olympiad Round 1, 2024
+- Team ranking No.13 in Duke University Mathematics Meet 2024
+- Individual ranking No.31 in Duke University Mathematics Meet 2024
+- The top 5% on the American Mathematics Competition 12, 2024
 - The Top 12 of Individual Performance in Junior Level of Youth Math Talent Boot Camp, 2024
 - Distinction of Individual Performance in Junior Level of Youth Math Talent Boot Camp, 2024
 - Distinction of Team Performance in Junior Level of Youth Math Talent Boot Camp, 2024
@@ -25,6 +30,7 @@ author_profile: true
 <font size=5>
 <b>Physics</b>
 </font>
+- Silver award in BPho Online Senior Physics Challenge, 2025
 - National Silver (Division 1) in the Thirty-Eighth Annual AAPT PhysicsBowl Contest, 2024
 - The 2nd prize in "Sui Yuan Cup" Nanjing city Middle School Physics Competition Grade 9, 2022
 - The 1st prize in "Sui Yuan Cup" Nanjing city Middle School Physics Competition Grade 8, 2021
