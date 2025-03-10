@@ -32,13 +32,6 @@ author_profile: true
 <hr style="border-width: 0.1px; color=gray">
 
 <font size=5>
-<b>Informatics</b>
-</font>
--  Silver level in USA Computing Olympiad, 2024
-
-<hr style="border-width: 0.1px; color=gray">
-
-<font size=5>
 <b>Linguistics</b>
 </font>
 -  The top 10%-30% of Junior Level on International Linguistics Olympiad, 2024
