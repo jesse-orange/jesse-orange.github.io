@@ -7,7 +7,7 @@ author_profile: true
 
 <font size=5> <b>Academic Activities</b></font>
 
-- In 2025, I took part in  
+- In 2025, I took part in the 2025 Chinese National Round of International Philosophy Olympiad in Shanghai, China.   
 
 - In 2024, I took part in Duke University Mathematics Meet in Durham, USA.
 
