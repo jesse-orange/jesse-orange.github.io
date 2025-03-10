@@ -7,6 +7,10 @@ author_profile: true
 
 <font size=5> <b>Academic Activities</b></font>
 
+- In 2024, I took part in Duke University Mathematics Meet in Durham, US.
+
+&emsp; <img src="/images/imagesacademic/academic202406.jpg" width="16%" hspace="21" >
+
 - In 2024, I took part in Youth Math Talent Boot Camp in Beijing, China.
 
 &emsp; <img src="/images/imagesacademic/academic202401.jpg" width="16%" hspace="21" >
