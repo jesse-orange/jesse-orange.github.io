@@ -7,7 +7,7 @@ author_profile: true
 
 <font size=5> <b>Academic Activities</b></font>
 
-- In 2024, I took part in Duke University Mathematics Meet in Durham, US.
+- In 2024, I took part in Duke University Mathematics Meet in Durham, USA.
 
 &emsp; <img src="/images/imagesacademic/academic202406.jpg" width="16%" hspace="21" >
 
