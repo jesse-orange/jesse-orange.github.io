@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Project</title>
+    <link rel="icon" href="../images/logo.png" type="image/png">
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            color: #e0e0e0;
+            background-color: #121212;
+        }
+
+        /* 页面容器 */
+        .pages-container {
+            height: 100%;
+            width: 100%;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        /* 页面样式 */
+        .page {
+            height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* 第一页样式 */
+        #page1 {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .title {
+            font-size: 3.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #6c63ff;
+            text-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .content-item {
+            background-color: rgba(30, 30, 46, 0.7);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(108, 99, 255, 0.2);
+        }
+
+        .content-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(108, 99, 255, 0.2);
+        }
+
+        .content-item h3 {
+            color: #6c63ff;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .content-item p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .content-item a {
+            color: #6c63ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .content-item a:hover {
+            color: #8a84ff;
+            text-decoration: underline;
+        }
+
+        .bottom-image {
+            max-width: 800px;
+            width: 100%;
+            height: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #6c63ff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 1px;
+        }
+
+
+
+        /* 第二页样式 */
+        #page2 {
+            background-color: #0f0f1a;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, auto);
+                gap: 20px;
+            }
+
+            .title {
+                font-size: 2.5rem;
+            }
+
+            .content-item {
+                padding: 20px;
+            }
+        }
+
+        /* 滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #6c63ff;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8a84ff;
+        }
+        .content-li {
+            padding-bottom: 20px;
+            line-height: 18px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="pages-container" id="pagesContainer">
+    <!-- 第一页 -->
+    <section class="page" id="page1">
+        <h1 class="title">Sound of Drawing</h1>
+
+        <div class="content-grid">
+            <div class="content-item">
+                <h3>Project Content</h3>
+                <p>
+                    This is a creative project that aims to design a program to verify how
+                    different images can be transformed into distinct musical melodies, thereby
+                    further interpreting the relationship between images and music from a
+                    philosophical perspective.
+                </p>
+            </div>
+
+            <div class="content-item">
+                <h3>Program Development</h3>
+                <p>
+                    To ensure the developed program is installation-free and compatible with
+                    multiple operating systems, web technologies such as HTML, CSS, and JavaScript
+                    were primarily used in its development.
+                </p>
+            </div>
+
+            <div class="content-item">
+                <h3>Program Functions</h3>
+                <ul>
+                    <li class="content-li">Draw images online or upload images</li>
+                    <li class="content-li">Analyze images and transform them into music</li>
+                    <li class="content-li">Play back the transformed music</li>
+                    <li class="content-li">Generate relevant analysis reports</li>
+                </ul>
+
+            </div>
+
+            <div class="content-item">
+                <h3>Philosophical Interpretation</h3>
+                <p>This project examines the philosophical relationship between creation and perception, questioning traditional boundaries between sensory experiences. It explores how artistic expression transcends medium-specific limitations.</p>
+                <a href="../pdf/drawingDoc.pdf" target="_blank" style="color: deepskyblue">More</a>
+            </div>
+        </div>
+
+        <div class="bottom-image">
+            <img src="../images/logo.png" alt="logo1">&nbsp;&nbsp;
+            <a href="#page2" id="nextPageLink" style="color: lawngreen; text-decoration: none">
+                See Demo on Next Page</a>
+            &nbsp;&nbsp;<img src="../images/logo.png" alt="logo2">
+        </div>
+    </section>
+
+    <!-- 第二页 -->
+    <section class="page" id="page2">
+        <div class="iframe-container">
+            <iframe src="./Sound_of_Drawing.html" title="Sound of Drawing Demo" id="demoFrame"></iframe>
+        </div>
+    </section>
+</div>
+
+<script>
+    // 确保第二页获得焦点
+    document.getElementById('nextPageLink').addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // 滚动到第二页
+        document.getElementById('page2').scrollIntoView({ behavior: 'smooth' });
+
+        // 设置焦点到iframe
+        setTimeout(function() {
+            document.getElementById('demoFrame').focus();
+        }, 500);
+    });
+
+    // 监听滚动事件，确保第二页显示时获得焦点
+    const pagesContainer = document.getElementById('pagesContainer');
+    let page2Focused = false;
+
+    pagesContainer.addEventListener('scroll', function() {
+        const page2 = document.getElementById('page2');
+        const rect = page2.getBoundingClientRect();
+
+        // 如果第二页在视口中且之前没有获得焦点
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight && !page2Focused) {
+            document.getElementById('demoFrame').focus();
+            page2Focused = true;
+        } else if (rect.top < 0 || rect.bottom > window.innerHeight) {
+            page2Focused = false;
+        }
+    });
+
+    // 响应式调整
+    window.addEventListener('resize', function() {
+        // 确保第二页在窗口大小改变后仍然正确显示
+        const page2 = document.getElementById('page2');
+        const rect = page2.getBoundingClientRect();
+
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            document.getElementById('demoFrame').focus();
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Project</title>
+    <link rel="icon" href="../images/logo.png" type="image/png">
+    <style>
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* 深色主题 */
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        /* 页面容器 */
+        .page-container {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 页面样式 */
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* 第一页样式 */
+        #page1 {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            z-index: 2;
+        }
+
+        /* 第二页样式 */
+        #page2 {
+            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+            z-index: 1;
+            transform: translateY(100%);
+        }
+
+        /* 页面内容容器 */
+        .content {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        /* 文本内容区域 */
+        .text-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        /* 标题样式 */
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 15px rgba(255, 126, 95, 0.3);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #feb47b;
+            border-bottom: 2px solid #ff7e5f;
+            padding-bottom: 10px;
+        }
+
+        /* 段落样式 */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* 列表样式 */
+        ul {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #ff7e5f;
+        }
+
+        /* 图片区域 */
+        .image-area {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-image {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease;
+        }
+
+        .main-image:hover {
+            transform: scale(1.03);
+        }
+
+        /* 轮播图样式 */
+        .carousel-container {
+            width: 100%;
+            max-width: 900px;
+            height: 95vh;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-slide {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        .carousel-item {
+            width: 33.333%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1a1a2e;
+        }
+
+        .carousel-img {
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        /* 轮播导航 */
+        .carousel-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot.active {
+            background-color: #ff7e5f;
+            transform: scale(1.2);
+        }
+
+        /* 导航箭头 */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-arrow:hover {
+            background-color: rgba(255, 126, 95, 0.8);
+        }
+
+        .prev {
+            left: 15px;
+        }
+
+        .next {
+            right: 15px;
+        }
+
+        /* 滚动提示 */
+        .scroll-hint {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-hint span {
+            margin-bottom: 5px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-content {
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .carousel-container {
+                height: 60vh;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .carousel-container {
+                height: 50vh;
+            }
+
+            .carousel-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+        .content-li {
+            padding-bottom: 20px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="page-container">
+    <!-- 第一页 -->
+    <div class="page" id="page1">
+        <div class="content">
+            <div class="text-content">
+                <h1>Mixed Chess Game Development</h1>
+
+                <h2>Design Motivation</h2>
+                <p>
+                    Out of love for Xiangqi (Chinese Chess, 中国象棋 in Chinese) and Chess, I hope to design a
+                    board game that combines the two into one, allowing players to enjoy
+                    both Xiangqi and Chess.
+                </p>
+
+                <h2>Development Tools</h2>
+                <ul>
+                    <li>Programming Language: python</li>
+                    <li>Game Framework: pygame</li>
+                </ul>
+
+                <h2>Software Copyright</h2>
+                <ul>
+                    <li>Copyright Owner: Jixi Gu (顾缉熙 in Chinese)</li>
+                    <li>Software Copyright Registration Number: 2025SR1391175</li>
+                    <li>Software Copyright Registration Certificate:
+                        <a href="../pdf/proofsoftware.pdf" target="_blank" style="color: deepskyblue">PDF</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="image-area">
+                <img src="../images/project11.jpg" alt="Chess Design" class="main-image">
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <span>Scroll Down</span>
+            <span>↓</span>
+        </div>
+    </div>
+
+    <!-- 第二页 -->
+    <div class="page" id="page2">
+        <div class="content">
+            <div class="text-content">
+                <h1>Game Demo</h1>
+                <ul>
+                    <li class="content-li">
+                        The game is compatible with Windows and macOS platforms,
+                        necessitating an environment with python and pygame.
+                    </li>
+                </ul>
+                <ul>
+                    <li class="content-li">
+                        Except for a few special rules in chess, the movement rules
+                        for all pieces follow those of Chinese Chess and International
+                        Chess, respectively.
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <div class="carousel-item">
+                        <img src="../images/game1.gif" alt="Game Demo 3" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/game2.gif" alt="Game Demo 3" class="carousel-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/game3.gif" alt="Game Demo 1" class="carousel-img">
+                    </div>
+                </div>
+
+                <button class="carousel-arrow prev">&#10094;</button>
+                <button class="carousel-arrow next">&#10095;</button>
+
+                <div class="carousel-nav">
+                    <div class="nav-dot active" data-index="0"></div>
+                    <div class="nav-dot" data-index="1"></div>
+                    <div class="nav-dot" data-index="2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 页面滚动切换
+    let currentPage = 1;
+    const page1 = document.getElementById('page1');
+    const page2 = document.getElementById('page2');
+    let isScrolling = false;
+
+    // 鼠标滚轮事件
+    window.addEventListener('wheel', (e) => {
+        if (isScrolling) return;
+
+        isScrolling = true;
+
+        if (e.deltaY > 0 && currentPage === 1) {
+            // 向下滚动，切换到第二页
+            page1.style.transform = 'translateY(-100%)';
+            page2.style.transform = 'translateY(0)';
+            currentPage = 2;
+        } else if (e.deltaY < 0 && currentPage === 2) {
+            // 向上滚动，切换到第一页
+            page1.style.transform = 'translateY(0)';
+            page2.style.transform = 'translateY(100%)';
+            currentPage = 1;
+        }
+
+        setTimeout(() => {
+            isScrolling = false;
+        }, 800);
+    });
+
+    // 触摸滑动支持
+    let startY = 0;
+
+    window.addEventListener('touchstart', (e) => {
+        startY = e.touches[0].clientY;
+    });
+
+    window.addEventListener('touchend', (e) => {
+        if (isScrolling) return;
+
+        const endY = e.changedTouches[0].clientY;
+        const diff = startY - endY;
+
+        if (Math.abs(diff) < 50) return; // 忽略小幅度滑动
+
+        isScrolling = true;
+
+        if (diff > 0 && currentPage === 1) {
+            // 向下滑动，切换到第二页
+            page1.style.transform = 'translateY(-100%)';
+            page2.style.transform = 'translateY(0)';
+            currentPage = 2;
+        } else if (diff < 0 && currentPage === 2) {
+            // 向上滑动，切换到第一页
+            page1.style.transform = 'translateY(0)';
+            page2.style.transform = 'translateY(100%)';
+            currentPage = 1;
+        }
+
+        setTimeout(() => {
+            isScrolling = false;
+        }, 800);
+    });
+
+    // 轮播图功能
+    const carouselSlide = document.querySelector('.carousel-slide');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const navDots = document.querySelectorAll('.nav-dot');
+
+    let counter = 0;
+    const size = carouselItems[0].clientWidth;
+
+    // 设置轮播图初始位置
+    carouselSlide.style.transform = 'translateX(0)';
+
+    // 下一张按钮事件
+    nextBtn.addEventListener('click', () => {
+        if (counter >= carouselItems.length - 1) return;
+        counter++;
+        updateCarousel();
+    });
+
+    // 上一张按钮事件
+    prevBtn.addEventListener('click', () => {
+        if (counter <= 0) return;
+        counter--;
+        updateCarousel();
+    });
+
+    // 导航点点击事件
+    navDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            counter = index;
+            updateCarousel();
+        });
+    });
+
+    // 更新轮播图位置和导航点状态
+    function updateCarousel() {
+        carouselSlide.style.transform = `translateX(${-counter * (100 / carouselItems.length)}%)`;
+
+        // 更新导航点状态
+        navDots.forEach((dot, index) => {
+            if (index === counter) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    // 自动轮播（可选）
+    // setInterval(() => {
+    //     if (counter >= carouselItems.length - 1) {
+    //         counter = 0;
+    //     } else {
+    //         counter++;
+    //     }
+    //     updateCarousel();
+    // }, 5000);
+</script>
+</body>
+</html>

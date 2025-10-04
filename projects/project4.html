@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Project</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <style>
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* 页面容器 */
+        .container {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 页面部分 */
+        .page {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5%;
+            opacity: 0;
+            transition: opacity 0.8s ease, transform 1s ease;
+            transform: translateY(20px);
+        }
+
+        /* 当前活动页面 */
+        .page.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 页面内容区域 */
+        .content {
+            width: 50%;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .content:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 图片区域 */
+        .image-section {
+            width: 45%;
+            height: 80%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease;
+        }
+
+        .image-section:hover {
+            transform: scale(1.02);
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 标题样式 */
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #3498db;
+            margin: 25px 0 15px;
+        }
+
+        /* 段落样式 */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        /* 导航指示器 */
+        .nav-dots {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(52, 73, 94, 0.5);
+            border-radius: 50%;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #3498db;
+            transform: scale(1.3);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .content, .image-section {
+                width: 48%;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page {
+                flex-direction: column;
+                padding: 10% 5%;
+            }
+
+            .content, .image-section {
+                width: 100%;
+            }
+
+            .content {
+                margin-bottom: 30px;
+                padding: 30px;
+            }
+
+            .image-section {
+                height: 40%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .nav-dots {
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+        .content-li {
+            padding-bottom: 20px;
+            line-height: 26px;
+            font-size: 17px;
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 页面1 -->
+    <div class="page active" id="page1">
+        <div class="content">
+            <h1 style="font-size: 39px">The Imagery of the Piece Knight and Its Philosophical Implications in The Queen's Gambit</h1>
+
+            <h2>Research Objectives</h2>
+            <li class="content-li">
+                To explore how the "knight" serves as a symbolic vehicle for Beth's
+                intellectual growth and self-awareness in the novel.
+            </li>
+            <li class="content-li">
+                To analyze the philosophical themes embodied by the knight's rules and
+                imagery, such as reason vs. intuition, freedom vs. constraint, and
+                order vs. chaos.
+            </li>
+
+            <h2>Research Questions</h2>
+            <li class="content-li">
+                How does the knight's movement reflect Beth's thinking patterns and
+                her process of overcoming limitations in both chess and life?
+            </li>
+            <li class="content-li">
+                How does Beth's use of the knight demonstrate the coexistence of
+                reason and intuition, and what philosophical insights does this
+                coexistence offer into human cognition?
+            </li>
+        </div>
+        <div class="image-section">
+            <img src="../images/project7.jpg" alt="Chess Knight">
+        </div>
+    </div>
+
+    <!-- 页面2 -->
+    <div class="page" id="page2">
+        <div class="content">
+            <h1 style="font-size: 39px">The Imagery of the Piece Knight and Its Philosophical Implications in The Queen's Gambit</h1>
+
+            <h2>Research Methods</h2>
+            <li class="content-li">
+                <strong>Close reading and imagery analysis:</strong><br>
+                Examining scenes involving the knight and their connection to
+                Beth's psychological and behavioral development.
+            </li>
+            <li class="content-li">
+                <strong>Application of philosophical frameworks:</strong><br>
+                Using theories to interpret the philosophical implications of the
+                knight imagery.
+            </li>
+
+            <h2>Research Outcomes</h2>
+            <p>
+                Jixi Gu, The imagery of the piece knight and its philosophical
+                implications in The Queen's Gambit.
+                <a href="../pdf/paperqueen.pdf" target="_blank" style="color: blue">PDF</a>
+            </p>
+        </div>
+        <div class="image-section">
+            <img src="../images/project27.jpg" alt="The Queen's Gambit">
+        </div>
+    </div>
+
+    <!-- 导航点 -->
+    <div class="nav-dots">
+        <div class="dot active" data-page="0"></div>
+        <div class="dot" data-page="1"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pages = document.querySelectorAll('.page');
+        const dots = document.querySelectorAll('.dot');
+        let currentPage = 0;
+
+        // 初始化页面
+        function initPages() {
+            pages.forEach((page, index) => {
+                if (index === 0) {
+                    page.classList.add('active');
+                } else {
+                    page.classList.remove('active');
+                }
+            });
+
+            dots.forEach((dot, index) => {
+                if (index === 0) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // 切换页面函数
+        function goToPage(pageIndex) {
+            if (pageIndex < 0 || pageIndex >= pages.length) return;
+
+            // 移除当前活动页面的active类
+            pages[currentPage].classList.remove('active');
+            dots[currentPage].classList.remove('active');
+
+            // 添加新页面的active类
+            pages[pageIndex].classList.add('active');
+            dots[pageIndex].classList.add('active');
+
+            currentPage = pageIndex;
+        }
+
+        // 导航点点击事件
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const pageIndex = parseInt(this.getAttribute('data-page'));
+                goToPage(pageIndex);
+            });
+        });
+
+        // 鼠标滚轮事件
+        let isScrolling = false;
+        document.addEventListener('wheel', function(e) {
+            if (isScrolling) return;
+
+            isScrolling = true;
+
+            if (e.deltaY > 0 && currentPage < pages.length - 1) {
+                // 向下滚动
+                goToPage(currentPage + 1);
+            } else if (e.deltaY < 0 && currentPage > 0) {
+                // 向上滚动
+                goToPage(currentPage - 1);
+            }
+
+            // 防止连续滚动
+            setTimeout(() => {
+                isScrolling = false;
+            }, 800);
+        });
+
+        // 初始化页面
+        initPages();
+    });
+</script>
+</body>
+</html>

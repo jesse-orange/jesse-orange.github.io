@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sound of Drawing</title>
+  <style>
+    :root{--bg:#0b0d12;--panel:#141823;--text:#e7ecf2;--muted:#93a1b3;--acc:#6ee7ff;--acc2:#ffd166}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;background:linear-gradient(180deg,#0b0d12,#0e1220);color:var(--text)}
+    header{padding:18px 16px;border-bottom:1px solid #1f2635;background:rgba(8,10,16,.7);backdrop-filter:blur(8px);position:sticky;top:0;z-index:10}
+    h1{margin:0;font-size:18px;letter-spacing:.2px}
+    main{max-width:1100px;margin:18px auto;padding:0 16px;display:grid;grid-template-columns:360px 1fr;grid-gap:16px}
+    @media (max-width: 960px){main{grid-template-columns:1fr}}
+    .panel{background:var(--panel);border:1px solid #20283a;border-radius:12px;padding:12px}
+    .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    label{font-size:12px;color:var(--muted)}
+    input[type=file]{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+    canvas{touch-action:none}
+    .btn,button{cursor:pointer;border:1px solid #27324a;background:#182035;color:var(--text);padding:8px 10px;border-radius:8px;font-size:13px}
+    .btn.primary{background:linear-gradient(180deg,#20304e,#1b2741);border-color:#2a3a5a}
+    .btn.ghost{background:transparent}
+    .btn:disabled{opacity:.5;cursor:not-allowed}
+    .tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+    .tools .tool{padding:6px 8px;border-radius:8px;background:#161d2d;border:1px solid #24314a;font-size:12px;color:var(--muted)}
+    .canvasWrap{position:relative}
+    canvas{width:100%;height:auto;background:#0b0f1a;border-radius:8px;border:1px solid #20283a}
+    .vizWrap{margin-top:10px}
+    #viz{width:100%;height:auto;background:#08101b;border-radius:8px;border:1px dashed #2f3e5d}
+    .meters{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px}
+    .meter{background:#0f1422;border:1px solid #20283a;border-radius:8px;padding:8px}
+    .meter h4{margin:0 0 6px 0;font-size:12px;color:var(--muted)}
+    .badge{display:inline-block;padding:2px 6px;border-radius:999px;background:#101728;border:1px solid #2b3752;font-size:11px;color:#cfe2ff}
+    .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .small{font-size:12px;color:var(--muted)}
+    .range{display:flex;align-items:center;gap:8px}
+    input[type=range]{accent-color:var(--acc)}
+    footer{max-width:1100px;margin:8px auto 24px;padding:0 16px;color:var(--muted);font-size:12px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sound of Drawing</h1>
+  </header>
+  <main>
+    <section class="panel" id="left">
+      <div class="row" style="justify-content:space-between">
+        <label class="badge">步骤 1 · 导入或绘制</label>
+        <div class="row">
+          <button class="btn" id="openBtn" type="button">打开图片</button>
+          <input id="fileInput" type="file" accept="image/*">
+          <button class="btn ghost" id="clearBtn">清空</button>
+        </div>
+      </div>
+      <div class="tools">
+        <span class="tool">画笔大小 <input id="brushSize" type="range" min="1" max="40" value="6"></span>
+        <span class="tool">颜色 <input id="brushColor" type="color" value="#ffffff"></span>
+        <button class="btn" id="eraseBtn">橡皮</button>
+        <button class="btn" id="penBtn">画笔</button>
+      </div>
+      <div class="canvasWrap">
+        <canvas id="canvas" width="900" height="600"></canvas>
+      </div>
+      <div class="vizWrap">
+        <div class="small" style="margin:6px 0 4px">播放动画</div>
+        <canvas id="viz" width="900" height="200"></canvas>
+      </div>
+      <div class="row controls">
+        <button class="btn primary" id="analyzeBtn">步骤 2 · 分析画面</button>
+        <button class="btn" id="playBtn" disabled>步骤 3 · 播放音乐</button>
+        <button class="btn" id="stopBtn" disabled>停止</button>
+        <button class="btn" id="exportBtn" disabled>导出 WAV</button>
+        <button class="btn" id="reportBtn" disabled>导出风格报告(3分钟)</button>
+      </div>
+      <div class="row small" style="margin-top:6px"></div>
+    </section>
+
+    <section class="panel" id="right">
+      <div class="row" style="justify-content:space-between">
+        <label class="badge">分析与映射</label>
+        <div class="row range">
+          <label>时长</label>
+          <input id="duration" type="range" min="10" max="240" value="60">
+          <span class="small" id="durationLabel">60s</span>
+        </div>
+      </div>
+      <div class="row range" style="margin-top:6px">
+        <label>风格敏感度</label>
+        <input id="sensitivity" type="range" min="0" max="100" value="55">
+        <span class="small" id="sensitivityLabel">55</span>
+      </div>
+      <div class="meters">
+        <div class="meter">
+          <h4>线条方向分布</h4>
+          <canvas id="angleChart" width="400" height="120"></canvas>
+        </div>
+        <div class="meter">
+          <h4>颜色与密度</h4>
+          <div class="small" id="colorStats">-</div>
+        </div>
+      </div>
+      <div class="meter" style="margin-top:8px">
+        <h4>音乐参数</h4>
+        <div class="small" id="musicParams">-</div>
+      </div>
+      <div class="meter" style="margin-top:8px">
+        <h4>风格报告预览</h4>
+        <div class="small" id="reportText">-</div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    
+  </footer>
+
+  <script>
+  // ---------- Canvas draw & image load ----------
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const viz = document.getElementById('viz');
+  const vctx = viz.getContext('2d');
+  const fileInput = document.getElementById('fileInput');
+  const openBtn = document.getElementById('openBtn');
+  const brushSize = document.getElementById('brushSize');
+  const brushColor = document.getElementById('brushColor');
+  const eraseBtn = document.getElementById('eraseBtn');
+  const penBtn = document.getElementById('penBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  const analyzeBtn = document.getElementById('analyzeBtn');
+  const playBtn = document.getElementById('playBtn');
+  const stopBtn = document.getElementById('stopBtn');
+  const exportBtn = document.getElementById('exportBtn');
+  const reportBtn = document.getElementById('reportBtn');
+  const durationEl = document.getElementById('duration');
+  const durationLabel = document.getElementById('durationLabel');
+  const sensitivityEl = document.getElementById('sensitivity');
+  const sensitivityLabel = document.getElementById('sensitivityLabel');
+  const angleChart = document.getElementById('angleChart');
+  const colorStatsEl = document.getElementById('colorStats');
+  const musicParamsEl = document.getElementById('musicParams');
+  const reportTextEl = document.getElementById('reportText');
+
+  let isErasing = false;
+  let drawing = false;
+  let lastX = 0, lastY = 0;
+
+  function resetCanvas() {
+    ctx.fillStyle = '#0b0f1a';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+  }
+  resetCanvas();
+
+  function getPos(e){
+    const rect = canvas.getBoundingClientRect();
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    return {x:(clientX-rect.left)*(canvas.width/rect.width), y:(clientY-rect.top)*(canvas.height/rect.height)};
+  }
+
+  function startDraw(e){ drawing = true; const p = getPos(e); lastX=p.x; lastY=p.y; }
+  function endDraw(){ drawing = false; }
+  function draw(e){
+    if(!drawing) return;
+    const p = getPos(e);
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.lineWidth = parseInt(brushSize.value,10);
+    if(isErasing){ ctx.globalCompositeOperation='destination-out'; ctx.strokeStyle='rgba(0,0,0,1)'; }
+    else { ctx.globalCompositeOperation='source-over'; ctx.strokeStyle=brushColor.value; }
+    ctx.beginPath(); ctx.moveTo(lastX,lastY); ctx.lineTo(p.x,p.y); ctx.stroke(); lastX=p.x; lastY=p.y;
+  }
+
+  canvas.addEventListener('mousedown', startDraw);
+  canvas.addEventListener('touchstart', (e)=>{ e.preventDefault(); startDraw(e); }, {passive:false});
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('touchmove', (e)=>{ e.preventDefault(); draw(e); }, {passive:false});
+  window.addEventListener('mouseup', endDraw);
+  window.addEventListener('touchend', endDraw, {passive:true});
+
+  openBtn.addEventListener('click', ()=>{ fileInput.click(); });
+
+  fileInput.addEventListener('change', (e)=>{
+    const file = e.target.files[0]; if(!file) return;
+    const img = new Image();
+    img.onload = ()=>{
+      // fit image into canvas
+      resetCanvas();
+      const scale = Math.min(canvas.width/img.width, canvas.height/img.height);
+      const w = img.width*scale, h = img.height*scale;
+      const x = (canvas.width - w)/2, y = (canvas.height - h)/2;
+      ctx.drawImage(img,x,y,w,h);
+      URL.revokeObjectURL(img.src);
+    };
+    img.onerror = ()=>{ alert('无法打开该图片，请尝试 JPG/PNG/WebP 格式。'); };
+    img.src = URL.createObjectURL(file);
+  });
+
+  // drag & drop
+  canvas.addEventListener('dragover', (e)=>{ e.preventDefault(); });
+  canvas.addEventListener('drop', (e)=>{ e.preventDefault(); const file = e.dataTransfer.files[0]; if(!file) return; fileInput.files = e.dataTransfer.files; fileInput.dispatchEvent(new Event('change')); });
+
+  eraseBtn.onclick = ()=>{ isErasing = true; };
+  penBtn.onclick = ()=>{ isErasing = false; };
+  clearBtn.onclick = ()=>{ resetCanvas(); };
+
+  durationEl.addEventListener('input', ()=>{ durationLabel.textContent = durationEl.value + 's'; });
+  sensitivityEl && sensitivityEl.addEventListener('input', ()=>{ sensitivityLabel.textContent = sensitivityEl.value; });
+
+  // ---------- Image analysis (no external libs) ----------
+  function getImageData(){ return ctx.getImageData(0,0,canvas.width,canvas.height); }
+
+  function toGrayscale(src){
+    const {width,height,data} = src; const gray = new Uint8ClampedArray(width*height);
+    for(let i=0,j=0;i<data.length;i+=4,j++){
+      const r=data[i], g=data[i+1], b=data[i+2];
+      gray[j] = (0.299*r + 0.587*g + 0.114*b)|0;
+    }
+    return {width,height,gray};
+  }
+
+  function sobel(grayObj){
+    const {width:w,height:h,gray} = grayObj;
+    const mag = new Float32Array(w*h);
+    const ang = new Float32Array(w*h);
+    const gxK = [-1,0,1,-2,0,2,-1,0,1];
+    const gyK = [-1,-2,-1,0,0,0,1,2,1];
+    for(let y=1;y<h-1;y++){
+      for(let x=1;x<w-1;x++){
+        let gx=0, gy=0, k=0;
+        for(let j=-1;j<=1;j++){
+          for(let i=-1;i<=1;i++){
+            const v = gray[(y+j)*w + (x+i)];
+            gx += v*gxK[k]; gy += v*gyK[k]; k++;
+          }
+        }
+        const m = Math.hypot(gx,gy); mag[y*w+x]=m;
+        let a = Math.atan2(gy,gx); // -pi..pi
+        if(a<0) a+=Math.PI; // fold to 0..pi (direction not orientation)
+        ang[y*w+x]=a;
+      }
+    }
+    return {width:w,height:h,mag,ang};
+  }
+
+  function colorStats(img){
+    const {width,height,data} = img; let r=0,g=0,b=0, s=0;
+    let satSum=0, valSum=0;
+    // variance accumulators
+    let sumR=0,sumG=0,sumB=0,sumR2=0,sumG2=0,sumB2=0;
+    for(let i=0;i<data.length;i+=4){
+      const R=data[i], G=data[i+1], B=data[i+2];
+      r+=R; g+=G; b+=B; s++;
+      sumR+=R; sumG+=G; sumB+=B; sumR2+=R*R; sumG2+=G*G; sumB2+=B*B;
+      const mx = Math.max(R,G,B), mn = Math.min(R,G,B);
+      const v = mx/255; const sat = mx===0 ? 0 : (mx-mn)/mx;
+      satSum += sat; valSum += v;
+    }
+    r/=s; g/=s; b/=s; const avgSat = satSum/s; const avgVal = valSum/s;
+    const brightness = 0.2126*r+0.7152*g+0.0722*b;
+    const varR = sumR2/s - (sumR/s)*(sumR/s);
+    const varG = sumG2/s - (sumG/s)*(sumG/s);
+    const varB = sumB2/s - (sumB/s)*(sumB/s);
+    const colorVariance = (varR+varG+varB)/3/ (255*255);
+    return {avgR:r,avgG:g,avgB:b,avgS:avgSat,avgV:avgVal,brightness,colorVariance};
+  }
+
+  function buildAngleHistogram(ang, mag, w, h){
+    const bins = new Array(12).fill(0);
+    let magnitudeTotal = 0;
+    let diagMag = 0, totalEdge=0;
+    for(let y=1;y<h-1;y++){
+      for(let x=1;x<w-1;x++){
+        const idx = y*w+x; const m = mag[idx]; if(m<50) continue; // threshold
+        magnitudeTotal += m;
+        const a = ang[idx];
+        const bin = Math.min(11, Math.floor(a/(Math.PI/12)));
+        bins[bin] += m;
+        totalEdge += m;
+        if((bin>=3 && bin<=4) || (bin>=8 && bin<=9)) diagMag += m; // around 45/135
+      }
+    }
+    // normalize
+    const max = Math.max(1, ...bins);
+    const diagRatio = totalEdge>0 ? diagMag/totalEdge : 0;
+    return {bins: bins.map(v=>v/max), energy: magnitudeTotal/(w*h), diagRatio};
+  }
+
+  function drawAngleChart(hist){
+    const c = angleChart; const g = c.getContext('2d');
+    g.clearRect(0,0,c.width,c.height);
+    const w = c.width, h = c.height; const pad=10; const barW = (w-2*pad)/hist.bins.length;
+    for(let i=0;i<hist.bins.length;i++){
+      const v = hist.bins[i];
+      const x = pad + i*barW; const bh = v*(h-2*pad);
+      g.fillStyle = '#6ee7ff';
+      g.fillRect(x, h-pad-bh, barW*0.9, bh);
+    }
+    g.fillStyle = '#93a1b3'; g.font = '10px system-ui'; g.fillText('0° → 180°', w-70, 12);
+  }
+
+  // ---------- Mapping visual → music ----------
+  function mapToMusicParams(angleHist, color){
+    const density = angleHist.energy; // overall edge energy
+    const horizontal = (angleHist.bins[0] + angleHist.bins[1]) / 2; // near 0°
+    const vertical = (angleHist.bins[5] + angleHist.bins[6]) / 2; // near 90°
+    const diagonal = (angleHist.bins[3] + angleHist.bins[8]) / 2; // ~45°/135°
+    const diagRatio = angleHist.diagRatio || diagonal;
+
+    // Estimate blockiness: high saturation but low edges suggests large color blocks
+    const blockiness = Math.max(0, (1 - Math.min(1, density*12))) * Math.min(1, color.avgS*1.2);
+    const contrast = Math.min(1, (color.colorVariance||0)*6);
+
+    // Tempo mapping: edge density + diagonal increase tempo
+    const tempo = Math.round(65 + Math.min(1, (density*8 + diagonal*1.5)) * 110); // 65..175
+
+    // Determine style
+    const sens = (sensitivityEl? (Number(sensitivityEl.value)/100) : 0.55);
+    const edmScore = 0.55*diagRatio + 0.35*blockiness + 0.25*contrast + 0.25*Math.min(1,density*10);
+    const gentleScore = 0.6*(1-diagRatio) + 0.3*(1-contrast) + 0.25*(1-Math.min(1,density*10)) + 0.15*(color.brightness>110?1:0);
+    const threshold = 0.5 - (sens-0.5)*0.25; // sensitivity biases the decision boundary
+    const isEDM = (edmScore - gentleScore) > (threshold-0.5);
+    const style = isEDM ? 'edm_dissonant' : 'gentle_landscape';
+
+    // Mode & timbre per style
+    let mode, timbreBase, complexity, dissonance;
+    if(style === 'gentle_landscape'){
+      mode = 'minor';
+      timbreBase = Math.round(160 + (1 - Math.min(1,color.avgS))*650); // softer
+      complexity = Math.min(0.45, horizontal*0.6 + (1-diagonal)*0.4);
+      dissonance = Math.max(0.05, 0.08 + (diagonal*0.12) - contrast*0.05); // mostly consonant
+    }else{
+      mode = 'phrygian'; // darker scale
+      timbreBase = Math.round(800 + Math.min(1,color.avgS)*1200 + contrast*400); // bright/harsh
+      complexity = Math.min(1, 0.55 + diagRatio*0.7 + density*0.45 + contrast*0.3);
+      dissonance = Math.min(1, 0.42 + diagRatio*0.45 + blockiness*0.35 + contrast*0.25);
+    }
+
+    const seconds = parseInt(durationEl.value,10);
+
+    return {tempo, mode, timbre: timbreBase, complexity, seconds, style, dissonance};
+  }
+
+  function humanizeParams(p){
+    const zhStyle = p.style==='edm_dissonant' ? '电音/不和谐' : '温柔/抒情';
+    return `风格 ${zhStyle}｜速度 ${p.tempo} BPM｜调式 ${p.mode}｜音色明亮度 ${p.timbre}｜和声复杂度 ${(p.complexity*100).toFixed(0)}%｜不协和度 ${(p.dissonance*100).toFixed(0)}%｜时长 ${p.seconds}s`;
+  }
+
+  let latestAnalysis = null;
+  analyzeBtn.onclick = ()=>{
+    const img = getImageData();
+    const g = toGrayscale(img);
+    const s = sobel(g);
+    const hist = buildAngleHistogram(s.ang, s.mag, s.width, s.height);
+    drawAngleChart(hist);
+    const cstats = colorStats(img);
+    colorStatsEl.textContent = `平均RGB(${cstats.avgR.toFixed(0)}, ${cstats.avgG.toFixed(0)}, ${cstats.avgB.toFixed(0)})，饱和度 ${(cstats.avgS*100).toFixed(0)}%，亮度 ${cstats.brightness.toFixed(0)}`;
+    const params = mapToMusicParams(hist, cstats);
+    latestAnalysis = {hist, cstats, params};
+    musicParamsEl.textContent = humanizeParams(params);
+    playBtn.disabled = false; exportBtn.disabled = false; reportBtn && (reportBtn.disabled = false);
+  };
+
+  // ---------- Web Audio synth & sequencer ----------
+  let audioCtx = null; let masterGain = null; let filterNode = null; let reverb = null; let playing = false; let stopFunc = null;
+  let analyser = null; let vizRAF = 0; let scheduledBeats = [];
+  let activeNodes = [];
+  let endTimer = null;
+
+  async function hardStopAll(){
+    try{ cancelAnimationFrame(vizRAF); }catch(e){}
+    if(stopFunc){ try{ stopFunc(); }catch(e){} }
+    if(endTimer){ clearTimeout(endTimer); endTimer=null; }
+    if(audioCtx){ try{ await audioCtx.close(); }catch(e){} }
+    audioCtx = null; masterGain=null; filterNode=null; analyser=null; activeNodes=[]; playing=false;
+  }
+
+  function noteToFreq(note){ return 440 * Math.pow(2,(note-69)/12); }
+  function scaleNotes(mode){
+    // C scale degrees within one octave
+    const modes = {
+      major:[0,2,4,5,7,9,11],
+      minor:[0,2,3,5,7,8,10],
+      dorian:[0,2,3,5,7,9,10],
+      phrygian:[0,1,3,5,7,8,10]
+    };
+    return modes[mode]||modes.major;
+  }
+
+  function generateProgression(complexity){
+    // Return sequence of triads over C (0) root. Complexity adds 7ths/9ths and chroma shifts.
+    const base = [0,5,3,4]; // I, VI, IV, V (relative degrees)
+    const spread = Math.round(2 + complexity*4);
+    const seq = [];
+    for(let i=0;i<16;i++){
+      const root = (base[i%base.length] + (Math.random()<complexity*0.4? (Math.random()<0.5? -2:2):0) + 7*12) ; // MIDI around C7
+      const add7 = Math.random()<complexity*0.8;
+      const add9 = Math.random()<complexity*0.4;
+      const addb9 = Math.random()<latestAnalysis.params.dissonance*0.5;
+      const addtritone = Math.random()<latestAnalysis.params.dissonance*0.35;
+      const chord = [root, root+4, root+7];
+      if(add7) chord.push(root+10);
+      if(add9) chord.push(root+14);
+      if(addb9) chord.push(root+13);
+      if(addtritone) chord.push(root+6);
+      // spread voices
+      for(let j=0;j<chord.length;j++) chord[j]+= (j%2===0? -12:0) - spread;
+      seq.push(chord);
+    }
+    return seq;
+  }
+
+  function scheduleMusic(params, img){
+    if(!audioCtx){ audioCtx = new (window.AudioContext||window.webkitAudioContext)(); }
+    const ctxNow = audioCtx.currentTime;
+    masterGain = audioCtx.createGain(); masterGain.gain.value = 0.8; 
+    analyser = audioCtx.createAnalyser(); analyser.fftSize = 2048; analyser.smoothingTimeConstant = 0.7;
+    masterGain.connect(analyser); analyser.connect(audioCtx.destination);
+    filterNode = audioCtx.createBiquadFilter(); filterNode.type = 'lowpass'; filterNode.frequency.value = params.timbre + 1200; filterNode.Q.value = 0.7; filterNode.connect(masterGain);
+
+    // tiny reverb via FeedbackDelay network (very lightweight substitute)
+    const delay = audioCtx.createDelay(1.2); delay.delayTime.value =  latestAnalysis.params.style==='edm_dissonant' ? 0.28 : 0.18;
+    const fb = audioCtx.createGain(); fb.gain.value = latestAnalysis.params.style==='edm_dissonant' ? 0.33 : 0.22;
+    delay.connect(fb); fb.connect(delay);
+    delay.connect(filterNode);
+
+    const meterGain = audioCtx.createGain(); meterGain.connect(delay);
+
+    const tempo = params.tempo; const secPerBeat = 60/tempo; const totalSec = params.seconds;
+    const steps = Math.floor(totalSec/secPerBeat);
+
+    const degrees = scaleNotes(params.mode);
+    // Build motif library influenced by orientation
+    const motifPool = buildMotifs(degrees, latestAnalysis.hist.bins);
+    const chordSeq = generateProgression(params.complexity);
+
+    // Derive melody contour from angle histogram peaks
+    const bins = latestAnalysis.hist.bins;
+    const topIdx = bins.map((v,i)=>[v,i]).sort((a,b)=>b[0]-a[0]).slice(0,3).map(x=>x[1]);
+    const melodies = topIdx.map(idx => (idx/11));
+
+    // optional distortion for EDM
+    const shaper = audioCtx.createWaveShaper();
+    shaper.curve = buildShaperCurve( latestAnalysis.params.dissonance );
+    shaper.oversample = '4x';
+
+    function createVoice(type, gain, attack, release){
+      return function playNote(time, midi, velocity=1){
+        const osc = audioCtx.createOscillator();
+        const g = audioCtx.createGain();
+        osc.type = type; osc.frequency.value = noteToFreq(midi);
+        g.gain.value = 0; g.gain.setTargetAtTime(gain*Math.max(0,Math.min(1,velocity)), time, attack);
+        g.gain.setTargetAtTime(0.0001, time + secPerBeat*0.9, release);
+        osc.connect(g);
+        if(latestAnalysis.params.style==='edm_dissonant'){
+          g.connect(shaper); shaper.connect(meterGain);
+        } else {
+          g.connect(meterGain);
+        }
+        osc.start(time);
+        osc.stop(time + secPerBeat*1.2);
+        activeNodes.push(osc, g);
+      }
+    }
+
+    const lead = createVoice(latestAnalysis.params.style==='edm_dissonant'?'sawtooth':'triangle', latestAnalysis.params.style==='edm_dissonant'?0.16:0.12, 0.005, 0.07);
+    // hi-hat removed
+
+    const baseMidi = 60; // C4
+    let t = ctxNow + 0.05;
+    scheduledBeats = [];
+
+    // Create sections with rhythm patterns and swing
+    const swing = latestAnalysis.params.style==='edm_dissonant' ? 0.56 : 0.52; // >0.5 means delayed offbeats
+    const sectionLenBars = 4;
+    const totalBars = Math.ceil(steps/4);
+    const patterns = latestAnalysis.params.style==='edm_dissonant'
+      ? [ [1,0,1,0, 1,0,1,0], [1,0,1,1, 1,0,1,1], [1,1,1,0, 1,1,1,0] ] // 8th-note gates
+      : [ [1,0,0,0, 1,0,1,0], [1,0,1,0, 0,0,1,0], [1,0,0,1, 1,0,0,1] ];
+    const melodyRests = latestAnalysis.params.style==='edm_dissonant'?0.15:0.25;
+
+    for(let bar=0; bar<totalBars; bar++){
+      const chord = chordSeq[bar % chordSeq.length];
+      const pat = patterns[Math.floor(bar/sectionLenBars)%patterns.length];
+      for(let i=0;i<4;i++){
+        // 4 beats per bar; subdivide into 2 eighths for swing
+        for(let sub=0; sub<2; sub++){
+          const isOff = sub===1;
+          const gate = pat[i*2+sub];
+          const beatStart = t;
+          const swung = isOff ? (secPerBeat*(swing)) : (secPerBeat*(1-swing));
+          // no drums
+          // melody with rests, motifs, durations, passing tones, octave jumps, velocity variance
+          if(Math.random()>melodyRests){
+            const motif = pickMotif(motifPool, bar, i, sub);
+            const localTempo = (1 + (Math.random()-0.5)*0.1);
+            let cursor = beatStart;
+            for(const noteInfo of motif){
+              const {degreeOffset, durBeats, passing} = noteInfo;
+              const baseDeg = degrees[Math.floor((melodies[bar%melodies.length]*degrees.length + degreeOffset + i + sub*0.5) % degrees.length)];
+              const add = passing ? (Math.random()<0.5? -1 : 1) : 0;
+              const jumpOct = Math.random()<0.15 ? (Math.random()<0.5?-12:12) : 0;
+              const pitchMod = Math.round((latestAnalysis.cstats.avgS-0.5)*6);
+              const vel = 0.75 + Math.random()*0.5;
+              const dur = Math.max(0.1, secPerBeat * durBeats * localTempo * (0.9 + 0.2*Math.random()));
+              lead(cursor, baseMidi + baseDeg + add + pitchMod + jumpOct, vel);
+              scheduledBeats.push(cursor);
+              cursor += dur;
+              if(cursor > beatStart + swung) break;
+            }
+          }
+          scheduledBeats.push(beatStart);
+          t += swung;
+        }
+      }
+    }
+
+    startVisualizer(secPerBeat);
+    playing = true;
+    stopFunc = ()=>{
+      try{ masterGain.gain.setTargetAtTime(0.0001, audioCtx.currentTime, 0.03);}catch(e){}
+      // hard stop and disconnect any active sources
+      const now = audioCtx.currentTime;
+      for(const node of activeNodes){
+        try{ if(typeof node.stop === 'function') node.stop(now); }catch(e){}
+        try{ node.disconnect && node.disconnect(); }catch(e){}
+      }
+      activeNodes = [];
+      playing=false; cancelAnimationFrame(vizRAF);
+    };
+
+    // auto stop at session end
+    if(endTimer){ clearTimeout(endTimer); }
+    endTimer = setTimeout(()=>{ if(playing && stopFunc){ stopFunc(); } }, Math.max(0, (totalSec*1000 - 50)));
+  }
+
+  // ---------- Visualizer ----------
+  function startVisualizer(secPerBeat){
+    const w = viz.width, h = viz.height;
+    const timeData = new Uint8Array(analyser.frequencyBinCount);
+    const freqData = new Uint8Array(analyser.frequencyBinCount);
+    let lastBeatIdx = -1;
+
+    function draw(){
+      vizRAF = requestAnimationFrame(draw);
+      vctx.clearRect(0,0,w,h);
+      analyser.getByteTimeDomainData(timeData);
+      // Compute rough loudness
+      let sum=0; for(let i=0;i<timeData.length;i++){ const v = (timeData[i]-128)/128; sum += v*v; }
+      const rms = Math.sqrt(sum/timeData.length);
+      // Beat detection via schedule proximity
+      const now = audioCtx.currentTime;
+      let beatProx = 0;
+      for(let i=lastBeatIdx+1;i<scheduledBeats.length;i++){
+        const dt = Math.abs(scheduledBeats[i]-now);
+        if(dt<0.06){ lastBeatIdx = i; beatProx = 1; break; }
+        if(scheduledBeats[i] < now-0.06) { lastBeatIdx = i; continue; }
+        if(scheduledBeats[i] > now+0.2) break;
+      }
+      const pulse = Math.max(beatProx, Math.min(1, rms*8));
+
+      // Only draw frequency bars
+      const freqArray = new Uint8Array(analyser.frequencyBinCount);
+      analyser.getByteFrequencyData(freqArray);
+      const barCount = 48;
+      const binStep = Math.floor(freqArray.length/barCount);
+      const bandWidthFull = w/barCount;
+      const bandWidth = bandWidthFull*0.9;
+      for(let bi=0; bi<barCount; bi++){
+        const val = freqArray[bi*binStep]/255;
+        const bandHeight = (h*0.9) * Math.pow(val, 0.7);
+        const x = bi*bandWidthFull + (bandWidthFull - bandWidth)/2;
+        const y = h - bandHeight;
+        vctx.fillStyle = `rgba(255,209,102,${0.25+0.6*val})`;
+        vctx.fillRect(x, y, bandWidth, bandHeight);
+      }
+      return;
+
+      // Global vignette pulse (stronger)
+      const grad = vctx.createRadialGradient(w/2,h/2,Math.min(w,h)*0.10*(1+pulse*0.25), w/2,h/2, Math.max(w,h)*0.75);
+      grad.addColorStop(0, 'rgba(110,231,255,'+(0.12+0.25*pulse)+')');
+      grad.addColorStop(1, 'rgba(0,0,0,0)');
+      vctx.fillStyle = grad; vctx.fillRect(0,0,w,h);
+
+      // Frequency bars for clearer motion
+      const bars = 48; // coarse
+      const step = Math.floor(freqData.length/bars);
+      for(let i=0;i<bars;i++){
+        const v = freqData[i*step]/255;
+        const bw = (w/bars)*0.9;
+        const bh = (h*0.5) * Math.pow(v, 0.7);
+        const x = i*(w/bars) + (w/bars - bw)/2;
+        const y = h - bh;
+        vctx.fillStyle = `rgba(255,209,102,${0.25+0.6*v})`;
+        vctx.fillRect(x, y, bw, bh);
+      }
+
+      // Note ripples from angle histogram peaks
+      if(latestAnalysis){
+        const bins = latestAnalysis.hist.bins;
+        const peaks = bins.map((v,i)=>[v,i]).sort((a,b)=>b[0]-a[0]).slice(0,3);
+        for(let k=0;k<peaks.length;k++){
+          const phase = ((now*1.5 + k*0.3) % 1);
+          const radius = (Math.min(w,h)*0.16) * (0.5 + 1.0*phase + pulse*0.35);
+          const angle = peaks[k][1]/12*Math.PI;
+          const cx = w/2 + Math.cos(angle)*w*0.2;
+          const cy = h/2 + Math.sin(angle)*h*0.2;
+          vctx.beginPath();
+          vctx.arc(cx, cy, radius, 0, Math.PI*2);
+          vctx.strokeStyle = 'rgba(255,209,102,'+(0.35*(1-phase)+0.2*pulse)+')';
+          vctx.lineWidth = 2 + pulse*5; vctx.stroke();
+        }
+      }
+
+      // Beat flash overlay (style-colored)
+      if(beatProx>0){
+        const isEDM = latestAnalysis && latestAnalysis.params.style==='edm_dissonant';
+        vctx.fillStyle = isEDM ? 'rgba(255,80,80,'+(0.18+0.25*pulse)+')' : 'rgba(110,231,255,'+(0.12+0.2*pulse)+')';
+        vctx.fillRect(0,0,w, Math.min(h*0.2 + h*0.3*pulse, h));
+      }
+    }
+    draw();
+  }
+
+  playBtn.onclick = async ()=>{
+    playBtn.disabled = true;
+    await hardStopAll();
+    if(!latestAnalysis){ analyzeBtn.click(); }
+    if(!audioCtx){ audioCtx = new (window.AudioContext||window.webkitAudioContext)(); }
+    await audioCtx.resume();
+    scheduleMusic(latestAnalysis.params);
+    stopBtn.disabled = false;
+  };
+
+  stopBtn.onclick = async ()=>{ if(stopFunc) stopFunc(); await new Promise(r=>setTimeout(r,50)); await hardStopAll(); playBtn.disabled=false; stopBtn.disabled=true; };
+
+  // ---------- WAV export via OfflineAudioContext ----------
+  exportBtn.onclick = async ()=>{
+    if(!latestAnalysis) { analyzeBtn.click(); }
+    const sr = 44100; const len = Math.ceil(sr * latestAnalysis.params.seconds);
+    const off = new OfflineAudioContext(2, len, sr);
+    const mg = off.createGain(); mg.gain.value = 0.9; mg.connect(off.destination);
+    const lp = off.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value = latestAnalysis.params.timbre+1200; lp.connect(mg);
+    const shaper = off.createWaveShaper(); shaper.curve = buildShaperCurve(latestAnalysis.params.dissonance); shaper.oversample='4x';
+    shaper.connect(lp);
+
+    function note(freq, start, dur, type='triangle', gain=0.08){
+      const o = off.createOscillator(); o.type=type; o.frequency.value=freq;
+      const g = off.createGain(); g.gain.value=0; g.gain.setTargetAtTime(gain, start, 0.01); g.gain.setTargetAtTime(0.0001, start+dur*0.9, 0.06);
+      o.connect(g); if(latestAnalysis.params.style==='edm_dissonant'){ g.connect(shaper);} else { g.connect(lp);} o.start(start); o.stop(start+dur);
+    }
+
+    const tempo = latestAnalysis.params.tempo; const spb = 60/tempo;
+    const degrees = scaleNotes(latestAnalysis.params.mode);
+    const base = 60; let t=0;
+    const swing = latestAnalysis.params.style==='edm_dissonant' ? 0.56 : 0.52;
+    const patterns = latestAnalysis.params.style==='edm_dissonant'
+      ? [ [1,0,1,0, 1,0,1,0], [1,0,1,1, 1,0,1,1] ]
+      : [ [1,0,0,0, 1,0,1,0], [1,0,1,0, 0,0,1,0] ];
+    let bar=0;
+    while(t < latestAnalysis.params.seconds){
+      const pat = patterns[bar%patterns.length];
+      for(let i=0;i<4 && t<latestAnalysis.params.seconds;i++){
+        for(let sub=0; sub<2 && t<latestAnalysis.params.seconds; sub++){
+          const isOff = sub===1; const gate = pat[i*2+sub];
+          const swung = isOff ? (spb*(swing)) : (spb*(1-swing));
+          if(gate){
+            const mdeg = degrees[Math.floor(Math.random()*degrees.length)];
+            const jump = Math.random()<0.25 ? (Math.random()<0.5?-12:12) : 0;
+            note(noteToFreq(base+mdeg+jump), t, spb*0.95, latestAnalysis.params.style==='edm_dissonant'?'sawtooth':'triangle', latestAnalysis.params.style==='edm_dissonant'?0.1:0.08);
+          }
+          t += swung;
+        }
+      }
+      bar++;
+    }
+
+    const rendered = await off.startRendering();
+    // encode WAV
+    const wav = encodeWAV(rendered);
+    const url = URL.createObjectURL(new Blob([wav], {type:'audio/wav'}));
+    const a = document.createElement('a'); a.href=url; a.download='sound-of-drawing.wav'; a.click(); URL.revokeObjectURL(url);
+  };
+
+  // ---------- 3-minute style report export ----------
+  reportBtn && (reportBtn.onclick = async ()=>{
+    if(!latestAnalysis) { analyzeBtn.click(); }
+    const totalSec = 180;
+    const sr = 44100; const len = Math.ceil(sr * totalSec);
+    const off = new OfflineAudioContext(2, len, sr);
+    const mg = off.createGain(); mg.gain.value = 0.9; mg.connect(off.destination);
+    const lp = off.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value = latestAnalysis.params.timbre+1200; lp.connect(mg);
+    const shaper = off.createWaveShaper(); shaper.curve = buildShaperCurve(latestAnalysis.params.dissonance); shaper.oversample='4x';
+    shaper.connect(lp);
+
+    reportTextEl.textContent = '正在渲染 3 分钟风格报告，请稍候…';
+
+    function note(freq, start, dur, type='triangle', gain=0.08, useShaper=false){
+      const o = off.createOscillator(); o.type=type; o.frequency.value=freq;
+      const g = off.createGain(); g.gain.value=0; g.gain.setTargetAtTime(gain, start, 0.01); g.gain.setTargetAtTime(0.0001, start+dur*0.9, 0.06);
+      o.connect(g); if(useShaper){ g.connect(shaper);} else { g.connect(lp);} o.start(start); o.stop(start+dur);
+    }
+
+    // Build 6 sections of 30s, each with different params derived from the image
+    const base = 60;
+    const sections = 6;
+    const reportLines = [];
+    let t = 0;
+    for(let sct=0; sct<sections; sct++){
+      const blend = sct/(sections-1);
+      // interpolate style influences
+      const style = latestAnalysis.params.style;
+      const mode = style==='edm_dissonant' ? (blend<0.5? 'phrygian' : 'minor') : (blend<0.5? 'minor' : 'dorian');
+      const tempo = Math.round(latestAnalysis.params.tempo * (0.85 + 0.3*blend));
+      const spb = 60/tempo;
+      const timbre = (latestAnalysis.params.timbre + 400*blend);
+      const swing = style==='edm_dissonant' ? (0.55 + 0.03*blend) : (0.52 + 0.02*blend);
+      const degrees = scaleNotes(mode);
+      const patterns = style==='edm_dissonant'
+        ? [ [1,0,1,0, 1,0,1,0], [1,0,1,1, 1,0,1,1] ]
+        : [ [1,0,0,0, 1,0,1,0], [1,0,1,0, 0,0,1,0] ];
+      const pat = patterns[sct%patterns.length];
+      const sectionDur = 30; // seconds per section
+
+      reportLines.push(`${sct+1}. ${mode}｜${tempo}BPM｜swing ${(swing*100)|0}｜timbre ${Math.round(timbre)}`);
+
+      let secEnd = t + sectionDur;
+      while(t < secEnd && t < totalSec){
+        for(let i=0;i<4 && t<secEnd;i++){
+          for(let sub=0; sub<2 && t<secEnd; sub++){
+            const isOff = sub===1; const gate = pat[i*2+sub];
+            const swung = isOff ? (spb*(swing)) : (spb*(1-swing));
+            if(gate){
+              const mdeg = degrees[Math.floor(Math.random()*degrees.length)];
+              const jump = Math.random()<0.25 ? (Math.random()<0.5?-12:12) : 0;
+              const type = style==='edm_dissonant'?'sawtooth':'triangle';
+              const gain = style==='edm_dissonant'?0.1:0.08;
+              note(noteToFreq(base+mdeg+jump), t, Math.min(spb*0.95, secEnd-t), type, gain, style==='edm_dissonant');
+            }
+            t += swung;
+          }
+        }
+      }
+    }
+
+    // render and download
+    const rendered = await off.startRendering();
+    const wav = encodeWAV(rendered);
+    const url = URL.createObjectURL(new Blob([wav], {type:'audio/wav'}));
+    const a = document.createElement('a'); a.href=url; a.download='style-report-3min.wav'; a.click(); URL.revokeObjectURL(url);
+    // preview text
+    reportTextEl.textContent = reportLines.join(' | ');
+  });
+
+  function encodeWAV(audioBuffer){
+    const numCh = 2; const sampleRate = audioBuffer.sampleRate; const numFrames = audioBuffer.length;
+    const headerSize = 44; const bytesPerSample = 2; const dataSize = numFrames*numCh*bytesPerSample;
+    const buffer = new ArrayBuffer(headerSize + dataSize); const view = new DataView(buffer);
+    function writeStr(off,str){ for(let i=0;i<str.length;i++) view.setUint8(off+i, str.charCodeAt(i)); }
+    let offset=0;
+    writeStr(offset,'RIFF'); offset+=4;
+    view.setUint32(offset, 36 + dataSize, true); offset+=4;
+    writeStr(offset,'WAVE'); offset+=4;
+    writeStr(offset,'fmt '); offset+=4;
+    view.setUint32(offset,16,true); offset+=4; // PCM chunk size
+    view.setUint16(offset,1,true); offset+=2; // PCM
+    view.setUint16(offset,numCh,true); offset+=2;
+    view.setUint32(offset,sampleRate,true); offset+=4;
+    view.setUint32(offset,sampleRate*numCh*bytesPerSample,true); offset+=4;
+    view.setUint16(offset,numCh*bytesPerSample,true); offset+=2;
+    view.setUint16(offset,bytesPerSample*8,true); offset+=2;
+    writeStr(offset,'data'); offset+=4;
+    view.setUint32(offset,dataSize,true); offset+=4;
+    // interleave and write
+    const chData = new Array(numCh).fill(0).map((_,i)=>audioBuffer.getChannelData(Math.min(i,audioBuffer.numberOfChannels-1)));
+    let idx=0; for(let i=0;i<numFrames;i++){
+      for(let ch=0; ch<numCh; ch++){
+        let s = Math.max(-1, Math.min(1, chData[ch][i]));
+        view.setInt16(offset+idx, s<0 ? s*0x8000 : s*0x7FFF, true);
+        idx+=2;
+      }
+    }
+    return buffer;
+  }
+
+  // build distortion curve for dissonance control
+  function buildShaperCurve(amount){
+    const k = Math.max(0.0001, amount)*50;
+    const n = 44100;
+    const curve = new Float32Array(n);
+    const deg = Math.PI/180;
+    for(let i=0;i<n;i++){
+      const x = i*2/n - 1;
+      curve[i] = (3+k)*x*20*deg / (Math.PI + k*Math.abs(x));
+    }
+    return curve;
+  }
+
+  // construct melodic motifs from orientation histogram
+  function buildMotifs(degrees, bins){
+    const diag = (bins[3]+bins[8]) / 2;
+    const vert = (bins[5]+bins[6]) / 2;
+    const horiz = (bins[0]+bins[1]) / 2;
+    const motifs = [];
+    // calm ascending (good for gentle)
+    motifs.push([
+      {degreeOffset:0, durBeats:0.5, passing:false},
+      {degreeOffset:1, durBeats:0.5, passing:true},
+      {degreeOffset:2, durBeats:1.0, passing:false}
+    ]);
+    // arpeggio-like
+    motifs.push([
+      {degreeOffset:0, durBeats:0.5, passing:false},
+      {degreeOffset:2, durBeats:0.25, passing:false},
+      {degreeOffset:4, durBeats:0.75, passing:false}
+    ]);
+    // diagonal -> more leaps
+    if(diag>0.2){
+      motifs.push([
+        {degreeOffset:0, durBeats:0.25, passing:false},
+        {degreeOffset:3, durBeats:0.25, passing:false},
+        {degreeOffset:1, durBeats:0.5, passing:true}
+      ]);
+      motifs.push([
+        {degreeOffset:2, durBeats:0.5, passing:false},
+        {degreeOffset:5, durBeats:0.5, passing:false}
+      ]);
+    }
+    // vertical -> stepwise
+    if(vert>0.2){
+      motifs.push([
+        {degreeOffset:0, durBeats:0.5, passing:false},
+        {degreeOffset:1, durBeats:0.5, passing:false}
+      ]);
+    }
+    // horizontal -> longer notes
+    if(horiz>0.2){
+      motifs.push([
+        {degreeOffset:0, durBeats:1.0, passing:false}
+      ]);
+    }
+    return motifs;
+  }
+
+  function pickMotif(pool, bar, beat, sub){
+    if(!pool || pool.length===0){
+      return [{degreeOffset:0, durBeats:1.0, passing:false}];
+    }
+    const idx = Math.abs(Math.floor((bar*7 + beat*3 + (sub?1:0)) % pool.length));
+    return pool[idx];
+  }
+  </script>
+</body>
+</html>
+
+
