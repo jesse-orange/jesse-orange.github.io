@@ -1,40 +1,43 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sound of Drawing</title>
   <style>
-    :root{--bg:#0b0d12;--panel:#141823;--text:#e7ecf2;--muted:#93a1b3;--acc:#6ee7ff;--acc2:#ffd166}
+    :root{--bg:#2c3e50;--panel:#34495e;--text:#ecf0f1;--muted:#bdc3c7;--acc:#3498db;--acc2:#5dade2}
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;background:linear-gradient(180deg,#0b0d12,#0e1220);color:var(--text)}
-    header{padding:18px 16px;border-bottom:1px solid #1f2635;background:rgba(8,10,16,.7);backdrop-filter:blur(8px);position:sticky;top:0;z-index:10}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;background:linear-gradient(180deg,#2c3e50,#34495e);color:var(--text)}
+    header{padding:18px 16px;border-bottom:2px solid #5dade2;background:rgba(44,62,80,.9);backdrop-filter:blur(8px);position:sticky;top:0;z-index:10;box-shadow:0 2px 4px rgba(0,0,0,0.2)}
     h1{margin:0;font-size:18px;letter-spacing:.2px}
     main{max-width:1100px;margin:18px auto;padding:0 16px;display:grid;grid-template-columns:360px 1fr;grid-gap:16px}
     @media (max-width: 960px){main{grid-template-columns:1fr}}
-    .panel{background:var(--panel);border:1px solid #20283a;border-radius:12px;padding:12px}
+    .panel{background:var(--panel);border:2px solid #5dade2;border-radius:12px;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,0.3)}
     .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
     label{font-size:12px;color:var(--muted)}
     input[type=file]{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
     canvas{touch-action:none}
-    .btn,button{cursor:pointer;border:1px solid #27324a;background:#182035;color:var(--text);padding:8px 10px;border-radius:8px;font-size:13px}
-    .btn.primary{background:linear-gradient(180deg,#20304e,#1b2741);border-color:#2a3a5a}
+    .btn,button{cursor:pointer;border:2px solid #5dade2;background:#34495e;color:var(--text);padding:8px 10px;border-radius:8px;font-size:13px;box-shadow:0 1px 3px rgba(0,0,0,0.2)}
+    .btn.primary{background:linear-gradient(180deg,#3498db,#2980b9);border:2px solid #1f5f8b;color:#ffffff;box-shadow:0 2px 6px rgba(52,152,219,0.3)}
     .btn.ghost{background:transparent}
     .btn:disabled{opacity:.5;cursor:not-allowed}
     .tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
-    .tools .tool{padding:6px 8px;border-radius:8px;background:#161d2d;border:1px solid #24314a;font-size:12px;color:var(--muted)}
+    .tools .tool{padding:6px 8px;border-radius:8px;background:#34495e;border:1px solid #5dade2;font-size:12px;color:var(--muted);box-shadow:0 1px 2px rgba(0,0,0,0.1);display:flex;align-items:center;gap:4px}
     .canvasWrap{position:relative}
-    canvas{width:100%;height:auto;background:#0b0f1a;border-radius:8px;border:1px solid #20283a}
+    canvas{width:100%;height:auto;background:#2c3e50;border-radius:8px;border:2px solid #5dade2;box-shadow:0 2px 6px rgba(0,0,0,0.3)}
     .vizWrap{margin-top:10px}
-    #viz{width:100%;height:auto;background:#08101b;border-radius:8px;border:1px dashed #2f3e5d}
+    #viz{width:100%;height:auto;background:#2c3e50;border-radius:8px;border:2px dashed #5dade2;box-shadow:0 2px 6px rgba(0,0,0,0.3)}
     .meters{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px}
-    .meter{background:#0f1422;border:1px solid #20283a;border-radius:8px;padding:8px}
+    .meter{background:#34495e;border:2px solid #5dade2;border-radius:8px;padding:8px;box-shadow:0 2px 4px rgba(0,0,0,0.2)}
     .meter h4{margin:0 0 6px 0;font-size:12px;color:var(--muted)}
-    .badge{display:inline-block;padding:2px 6px;border-radius:999px;background:#101728;border:1px solid #2b3752;font-size:11px;color:#cfe2ff}
+    .badge{display:inline-block;padding:2px 6px;border-radius:999px;background:#34495e;border:1px solid #5dade2;font-size:11px;color:#ecf0f1;box-shadow:0 1px 2px rgba(0,0,0,0.1)}
     .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
     .small{font-size:12px;color:var(--muted)}
     .range{display:flex;align-items:center;gap:8px}
     input[type=range]{accent-color:var(--acc)}
+    input[type=color]{border:none;background:none;padding:0;width:24px;height:24px;border-radius:4px;cursor:pointer;vertical-align:middle;margin-left:4px}
+    input[type=color]::-webkit-color-swatch-wrapper{padding:0}
+    input[type=color]::-webkit-color-swatch{border:none;border-radius:4px}
     footer{max-width:1100px;margin:8px auto 24px;padding:0 16px;color:var(--muted);font-size:12px}
   </style>
 </head>
@@ -45,66 +48,66 @@
   <main>
     <section class="panel" id="left">
       <div class="row" style="justify-content:space-between">
-        <label class="badge">步骤 1 · 导入或绘制</label>
+        <label class="badge">Step 1 · Import or Draw</label>
         <div class="row">
-          <button class="btn" id="openBtn" type="button">打开图片</button>
+          <button class="btn" id="openBtn" type="button">Load Image</button>
           <input id="fileInput" type="file" accept="image/*">
-          <button class="btn ghost" id="clearBtn">清空</button>
+          <button class="btn ghost" id="clearBtn">Clear</button>
         </div>
       </div>
       <div class="tools">
-        <span class="tool">画笔大小 <input id="brushSize" type="range" min="1" max="40" value="6"></span>
-        <span class="tool">颜色 <input id="brushColor" type="color" value="#ffffff"></span>
-        <button class="btn" id="eraseBtn">橡皮</button>
-        <button class="btn" id="penBtn">画笔</button>
+        <span class="tool">Brush Size <input id="brushSize" type="range" min="1" max="40" value="6"></span>
+        <span class="tool">Color <input id="brushColor" type="color" value="#FFFF00"></span>
+        <button class="btn" id="eraseBtn">Eraser</button>
+        <button class="btn" id="penBtn">Pen</button>
       </div>
       <div class="canvasWrap">
         <canvas id="canvas" width="900" height="600"></canvas>
       </div>
       <div class="vizWrap">
-        <div class="small" style="margin:6px 0 4px">播放动画</div>
+        <div class="small" style="margin:6px 0 4px">Play Animation</div>
         <canvas id="viz" width="900" height="200"></canvas>
       </div>
       <div class="row controls">
-        <button class="btn primary" id="analyzeBtn">步骤 2 · 分析画面</button>
-        <button class="btn" id="playBtn" disabled>步骤 3 · 播放音乐</button>
-        <button class="btn" id="stopBtn" disabled>停止</button>
-        <button class="btn" id="exportBtn" disabled>导出 WAV</button>
-        <button class="btn" id="reportBtn" disabled>导出风格报告(3分钟)</button>
+        <button class="btn primary" id="analyzeBtn">Step 2 · Analyze Image</button>
+        <button class="btn" id="playBtn" disabled>Step 3 · Play Music</button>
+        <button class="btn" id="stopBtn" disabled>Stop</button>
+        <button class="btn" id="exportBtn" disabled>Export WAV</button>
+        <button class="btn" id="reportBtn" disabled>Export Style Report (TXT)</button>
       </div>
       <div class="row small" style="margin-top:6px"></div>
     </section>
 
     <section class="panel" id="right">
       <div class="row" style="justify-content:space-between">
-        <label class="badge">分析与映射</label>
+        <label class="badge">Analysis & Mapping</label>
         <div class="row range">
-          <label>时长</label>
+          <label>Duration</label>
           <input id="duration" type="range" min="10" max="240" value="60">
           <span class="small" id="durationLabel">60s</span>
         </div>
       </div>
       <div class="row range" style="margin-top:6px">
-        <label>风格敏感度</label>
+        <label>Style Sensitivity</label>
         <input id="sensitivity" type="range" min="0" max="100" value="55">
         <span class="small" id="sensitivityLabel">55</span>
       </div>
       <div class="meters">
         <div class="meter">
-          <h4>线条方向分布</h4>
+          <h4>Line Direction Distribution</h4>
           <canvas id="angleChart" width="400" height="120"></canvas>
         </div>
         <div class="meter">
-          <h4>颜色与密度</h4>
+          <h4>Color & Density</h4>
           <div class="small" id="colorStats">-</div>
         </div>
       </div>
       <div class="meter" style="margin-top:8px">
-        <h4>音乐参数</h4>
+        <h4>Music Parameters</h4>
         <div class="small" id="musicParams">-</div>
       </div>
       <div class="meter" style="margin-top:8px">
-        <h4>风格报告预览</h4>
+        <h4>Style Report Generation</h4>
         <div class="small" id="reportText">-</div>
       </div>
     </section>
@@ -144,8 +147,8 @@
   let drawing = false;
   let lastX = 0, lastY = 0;
 
-  function resetCanvas() {
-    ctx.fillStyle = '#0b0f1a';
+    function resetCanvas() {
+    ctx.fillStyle = '#2c3e50';
     ctx.fillRect(0,0,canvas.width,canvas.height);
   }
   resetCanvas();
@@ -191,7 +194,7 @@
       ctx.drawImage(img,x,y,w,h);
       URL.revokeObjectURL(img.src);
     };
-    img.onerror = ()=>{ alert('无法打开该图片，请尝试 JPG/PNG/WebP 格式。'); };
+    img.onerror = ()=>{ alert('Cannot open this image, please try JPG/PNG/WebP format.'); };
     img.src = URL.createObjectURL(file);
   });
 
@@ -288,14 +291,17 @@
   function drawAngleChart(hist){
     const c = angleChart; const g = c.getContext('2d');
     g.clearRect(0,0,c.width,c.height);
+    // Fill dark background
+    g.fillStyle = '#2c3e50';
+    g.fillRect(0,0,c.width,c.height);
     const w = c.width, h = c.height; const pad=10; const barW = (w-2*pad)/hist.bins.length;
     for(let i=0;i<hist.bins.length;i++){
       const v = hist.bins[i];
       const x = pad + i*barW; const bh = v*(h-2*pad);
-      g.fillStyle = '#6ee7ff';
+      g.fillStyle = '#5dade2';
       g.fillRect(x, h-pad-bh, barW*0.9, bh);
     }
-    g.fillStyle = '#93a1b3'; g.font = '10px system-ui'; g.fillText('0° → 180°', w-70, 12);
+    g.fillStyle = '#bdc3c7'; g.font = '10px system-ui'; g.fillText('0° → 180°', w-70, 12);
   }
 
   // ---------- Mapping visual → music ----------
@@ -341,8 +347,8 @@
   }
 
   function humanizeParams(p){
-    const zhStyle = p.style==='edm_dissonant' ? '电音/不和谐' : '温柔/抒情';
-    return `风格 ${zhStyle}｜速度 ${p.tempo} BPM｜调式 ${p.mode}｜音色明亮度 ${p.timbre}｜和声复杂度 ${(p.complexity*100).toFixed(0)}%｜不协和度 ${(p.dissonance*100).toFixed(0)}%｜时长 ${p.seconds}s`;
+    const enStyle = p.style==='edm_dissonant' ? 'EDM/Dissonant' : 'Gentle/Lyrical';
+    return `Style ${enStyle} | Tempo ${p.tempo} BPM | Mode ${p.mode} | Timbre Brightness ${p.timbre} | Harmonic Complexity ${(p.complexity*100).toFixed(0)}% | Dissonance ${(p.dissonance*100).toFixed(0)}% | Duration ${p.seconds}s`;
   }
 
   let latestAnalysis = null;
@@ -353,7 +359,7 @@
     const hist = buildAngleHistogram(s.ang, s.mag, s.width, s.height);
     drawAngleChart(hist);
     const cstats = colorStats(img);
-    colorStatsEl.textContent = `平均RGB(${cstats.avgR.toFixed(0)}, ${cstats.avgG.toFixed(0)}, ${cstats.avgB.toFixed(0)})，饱和度 ${(cstats.avgS*100).toFixed(0)}%，亮度 ${cstats.brightness.toFixed(0)}`;
+    colorStatsEl.textContent = `Average RGB(${cstats.avgR.toFixed(0)}, ${cstats.avgG.toFixed(0)}, ${cstats.avgB.toFixed(0)}), Saturation ${(cstats.avgS*100).toFixed(0)}%, Brightness ${cstats.brightness.toFixed(0)}`;
     const params = mapToMusicParams(hist, cstats);
     latestAnalysis = {hist, cstats, params};
     musicParamsEl.textContent = humanizeParams(params);
@@ -681,75 +687,119 @@
     const a = document.createElement('a'); a.href=url; a.download='sound-of-drawing.wav'; a.click(); URL.revokeObjectURL(url);
   };
 
-  // ---------- 3-minute style report export ----------
+  // ---------- TXT style report export ----------
   reportBtn && (reportBtn.onclick = async ()=>{
     if(!latestAnalysis) { analyzeBtn.click(); }
-    const totalSec = 180;
-    const sr = 44100; const len = Math.ceil(sr * totalSec);
-    const off = new OfflineAudioContext(2, len, sr);
-    const mg = off.createGain(); mg.gain.value = 0.9; mg.connect(off.destination);
-    const lp = off.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value = latestAnalysis.params.timbre+1200; lp.connect(mg);
-    const shaper = off.createWaveShaper(); shaper.curve = buildShaperCurve(latestAnalysis.params.dissonance); shaper.oversample='4x';
-    shaper.connect(lp);
+    
+    reportTextEl.textContent = 'Generating style report, please wait...';
 
-    reportTextEl.textContent = '正在渲染 3 分钟风格报告，请稍候…';
-
-    function note(freq, start, dur, type='triangle', gain=0.08, useShaper=false){
-      const o = off.createOscillator(); o.type=type; o.frequency.value=freq;
-      const g = off.createGain(); g.gain.value=0; g.gain.setTargetAtTime(gain, start, 0.01); g.gain.setTargetAtTime(0.0001, start+dur*0.9, 0.06);
-      o.connect(g); if(useShaper){ g.connect(shaper);} else { g.connect(lp);} o.start(start); o.stop(start+dur);
-    }
-
-    // Build 6 sections of 30s, each with different params derived from the image
-    const base = 60;
-    const sections = 6;
-    const reportLines = [];
-    let t = 0;
-    for(let sct=0; sct<sections; sct++){
-      const blend = sct/(sections-1);
-      // interpolate style influences
-      const style = latestAnalysis.params.style;
-      const mode = style==='edm_dissonant' ? (blend<0.5? 'phrygian' : 'minor') : (blend<0.5? 'minor' : 'dorian');
-      const tempo = Math.round(latestAnalysis.params.tempo * (0.85 + 0.3*blend));
-      const spb = 60/tempo;
-      const timbre = (latestAnalysis.params.timbre + 400*blend);
-      const swing = style==='edm_dissonant' ? (0.55 + 0.03*blend) : (0.52 + 0.02*blend);
-      const degrees = scaleNotes(mode);
-      const patterns = style==='edm_dissonant'
-        ? [ [1,0,1,0, 1,0,1,0], [1,0,1,1, 1,0,1,1] ]
-        : [ [1,0,0,0, 1,0,1,0], [1,0,1,0, 0,0,1,0] ];
-      const pat = patterns[sct%patterns.length];
-      const sectionDur = 30; // seconds per section
-
-      reportLines.push(`${sct+1}. ${mode}｜${tempo}BPM｜swing ${(swing*100)|0}｜timbre ${Math.round(timbre)}`);
-
-      let secEnd = t + sectionDur;
-      while(t < secEnd && t < totalSec){
-        for(let i=0;i<4 && t<secEnd;i++){
-          for(let sub=0; sub<2 && t<secEnd; sub++){
-            const isOff = sub===1; const gate = pat[i*2+sub];
-            const swung = isOff ? (spb*(swing)) : (spb*(1-swing));
-            if(gate){
-              const mdeg = degrees[Math.floor(Math.random()*degrees.length)];
-              const jump = Math.random()<0.25 ? (Math.random()<0.5?-12:12) : 0;
-              const type = style==='edm_dissonant'?'sawtooth':'triangle';
-              const gain = style==='edm_dissonant'?0.1:0.08;
-              note(noteToFreq(base+mdeg+jump), t, Math.min(spb*0.95, secEnd-t), type, gain, style==='edm_dissonant');
-            }
-            t += swung;
-          }
-        }
-      }
-    }
-
-    // render and download
-    const rendered = await off.startRendering();
-    const wav = encodeWAV(rendered);
-    const url = URL.createObjectURL(new Blob([wav], {type:'audio/wav'}));
-    const a = document.createElement('a'); a.href=url; a.download='style-report-3min.wav'; a.click(); URL.revokeObjectURL(url);
-    // preview text
-    reportTextEl.textContent = reportLines.join(' | ');
+    // Generate comprehensive style report
+    const report = generateStyleReport(latestAnalysis);
+    
+    // Create and download TXT file
+    const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'style-report.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+    
+    // Show preview in UI
+    const preview = report.split('\n').slice(0, 3).join(' | ');
+    reportTextEl.textContent = preview;
   });
+
+  function generateStyleReport(analysis) {
+    const { hist, cstats, params } = analysis;
+    const report = [];
+    
+    report.push('=== SOUND OF DRAWING - STYLE ANALYSIS REPORT ===');
+    report.push('');
+    report.push('Generated on: ' + new Date().toLocaleString());
+    report.push('');
+    
+    // Image Analysis Section
+    report.push('--- IMAGE ANALYSIS ---');
+    report.push(`Average RGB: (${cstats.avgR.toFixed(0)}, ${cstats.avgG.toFixed(0)}, ${cstats.avgB.toFixed(0)})`);
+    report.push(`Saturation: ${(cstats.avgS * 100).toFixed(1)}%`);
+    report.push(`Brightness: ${cstats.brightness.toFixed(1)}`);
+    report.push(`Color Variance: ${(cstats.colorVariance * 100).toFixed(1)}%`);
+    report.push('');
+    
+    // Line Direction Analysis
+    report.push('--- LINE DIRECTION DISTRIBUTION ---');
+    const directions = ['0°-15°', '15°-30°', '30°-45°', '45°-60°', '60°-75°', '75°-90°', 
+                       '90°-105°', '105°-120°', '120°-135°', '135°-150°', '150°-165°', '165°-180°'];
+    hist.bins.forEach((value, index) => {
+      report.push(`${directions[index]}: ${(value * 100).toFixed(1)}%`);
+    });
+    report.push(`Overall Edge Energy: ${(hist.energy * 100).toFixed(1)}%`);
+    report.push(`Diagonal Ratio: ${(hist.diagRatio * 100).toFixed(1)}%`);
+    report.push('');
+    
+    // Music Parameters
+    report.push('--- MUSIC PARAMETERS ---');
+    const styleName = params.style === 'edm_dissonant' ? 'EDM/Dissonant' : 'Gentle/Lyrical';
+    report.push(`Detected Style: ${styleName}`);
+    report.push(`Tempo: ${params.tempo} BPM`);
+    report.push(`Musical Mode: ${params.mode}`);
+    report.push(`Timbre Brightness: ${params.timbre}`);
+    report.push(`Harmonic Complexity: ${(params.complexity * 100).toFixed(1)}%`);
+    report.push(`Dissonance Level: ${(params.dissonance * 100).toFixed(1)}%`);
+    report.push(`Duration: ${params.seconds} seconds`);
+    report.push('');
+    
+    // Style Interpretation
+    report.push('--- STYLE INTERPRETATION ---');
+    if (params.style === 'edm_dissonant') {
+      report.push('This image suggests an energetic, modern musical style with:');
+      report.push('- High contrast and diagonal elements creating dynamic rhythms');
+      report.push('- Bright, saturated colors indicating electronic timbres');
+      report.push('- Complex harmonic structures with intentional dissonance');
+      report.push('- Fast tempo suitable for dance or electronic music');
+    } else {
+      report.push('This image suggests a gentle, lyrical musical style with:');
+      report.push('- Smooth, flowing lines creating melodic contours');
+      report.push('- Balanced colors indicating warm, organic timbres');
+      report.push('- Harmonious structures with consonant intervals');
+      report.push('- Moderate tempo suitable for ambient or classical music');
+    }
+    report.push('');
+    
+    // Technical Details
+    report.push('--- TECHNICAL DETAILS ---');
+    report.push(`Sensitivity Setting: ${sensitivityEl ? sensitivityEl.value : 55}`);
+    report.push(`Canvas Resolution: ${canvas.width}x${canvas.height}`);
+    report.push(`Analysis Method: Sobel edge detection with angle histogram`);
+    report.push(`Color Space: RGB with HSV conversion for saturation/brightness`);
+    report.push('');
+    
+    // Recommendations
+    report.push('--- RECOMMENDATIONS ---');
+    if (params.complexity > 0.7) {
+      report.push('- Consider using complex chord progressions with extended harmonies');
+    } else {
+      report.push('- Simple triadic harmonies would work well');
+    }
+    
+    if (params.dissonance > 0.6) {
+      report.push('- Embrace dissonant intervals and chromaticism');
+    } else {
+      report.push('- Focus on consonant intervals and smooth voice leading');
+    }
+    
+    if (hist.diagRatio > 0.3) {
+      report.push('- Use syncopated rhythms and off-beat accents');
+    } else {
+      report.push('- Steady, flowing rhythms would complement the image');
+    }
+    
+    report.push('');
+    report.push('=== END OF REPORT ===');
+    
+    return report.join('\n');
+  }
 
   function encodeWAV(audioBuffer){
     const numCh = 2; const sampleRate = audioBuffer.sampleRate; const numFrames = audioBuffer.length;
