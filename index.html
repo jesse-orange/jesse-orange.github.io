@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -98,12 +99,12 @@
         }
 
         .menu-item:hover::before {
-            left: 10px;
+            left: 5px;
             animation: flyInLeft 0.3s ease forwards;
         }
 
         .menu-item:hover::after {
-            right: 10px;
+            right: 5px;
             animation: flyInRight 0.3s ease forwards;
         }
 
@@ -185,9 +186,18 @@
         .about-text {
             text-align: justify;
             line-height: 1.8;
-            font-size: 18px;
+            font-size: 17px;
             max-width: 800px;
             margin: 0 auto;
+        }
+        .title-text{
+            font-size: 20px;
+        }
+        .title-icon1 {
+            width: 30px;
+            height: 30px;
+            margin-left: 7px;
+            transform: translateY(5px);
         }
 
 
@@ -626,7 +636,7 @@
         <img src="images/me.jpg" alt="Jesse" class="avatar">
     </div>
     <ul class="menu">
-        <li class="menu-item" data-page="about">About Me</li>
+        <li class="menu-item" data-page="about">Self-introduction</li>
         <li class="menu-item" data-page="education">Education</li>
         <li class="menu-item" data-page="hobbies">Hobbies</li>
         <li class="menu-item" data-page="projects">Projects</li>
@@ -640,46 +650,63 @@
     <!-- About Me页面 -->
     <section id="about" class="page about-me-page active">
         <h1 class="page-title">
-            About Me &nbsp;&nbsp;
+            Self-introduction &nbsp;&nbsp;
             <img src="images/About.png" alt="About" class="title-icon">
             <img src="images/About.png" alt="About" class="title-icon">
         </h1>
         <div class="blue-line"></div>
         <div class="about-text">
+
+            <div class="title-text">
+                <img src="images/wking.png" alt="About" class="title-icon1">
+                <b> About Me </b>
+                <br>
+            </div>
             <p style="margin: 15px">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi, welcome to my website.
-                I am Jixi Gu and you also can call me Jesse.</p>
-            <p style="margin: 15px">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My first name in Chinese is 缉熙 ( Jixi ).
-                My mother, who obtained a doctor of letters degree in ancient Chinese literature,
-                told me that “缉熙” comes from the “Da ya” (“Major Court Hymns” or “Greater Odes
-                of the Kingdom”) section of <a href="https://en.wikipedia.org/wiki/Classic_of_Poetry" target="_blank" style="color: blue">
-                Shi Jing</a> (Classic of Poetry), which collects poems
-                or songs of praise for <a href="https://en.wikipedia.org/wiki/Western_Zhou" target="_blank" style="color: blue">Western
-                Zhou Dynasty</a> (1046-771 BC), and this word means
-                “bright” in ancient Chinese language and in Shi Jing is used to glorify
-                <a href="https://en.wikipedia.org/wiki/King_Wen_of_Zhou" target="_blank" style="color: blue">King Wen
-                of Zhou</a>, the founder of Western Zhou Dynasty and first epic hero of Chinese
-                history. My Chinese nickname is 橙橙, which in English is “orange”. When I asked my
-                father, who had a doctor of engineering degree, why they gave me this name,
-                he smiled mysteriously and said “Because I like to eat oranges” .
+                Hi, I’m Jixi (Jesse) Gu, a high school student from <a href="https://en.wikipedia.org/wiki/Nanjing_No.1_High_School" target="_blank"
+                                                                       style="text-decoration: none; color: blue">
+                Nanjing No.1 Middle School</a>,
+                China. I spend much of my time thinking about how logic and emotion coexist — in
+                games, in code, and in the quiet rhythm of everyday life.
             </p>
             <p style="margin: 15px">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In my spare time, I enjoy playing
-                <a href="https://en.wikipedia.org/wiki/Xiangqi" target="_blank" style="color: blue">Xiangqi</a>
-                or chess, music, reading and travelling. My favourite hobby is Xiangqi, also
-                commonly known as Chinese chess (中国象棋 in Chinese). Ever since my father had
-                bought a Xiangqi set for me from the supermaket at my four years old, I have
-                been deeply fascinated by Xiangqi. <a href="https://www.xqinenglish.com/index.php?option=com_content&view=article&id=218:china-zhang-guofeng&catid=172&Itemid=526&lang=en" target="_blank" style="color: blue">
-                Zhang Guofeng</a>, a female Xiangqi GM
-                (Grandmaster), taught me Xiangqi since I was five, and she is not only my teacher
-                but also my very good friend.
+                My name, 缉熙 (Jixi), comes from <a href="https://en.wikipedia.org/wiki/Classic_of_Poetry" target="_blank" style="text-decoration: none; color: blue">
+                The Classic of Poetry </a>, where it means
+                “to preserve brightness.” My mother chose it to remind me that clarity grows not
+                from certainty, but from reflection. My father balanced that ideal with humor and
+                a nickname — “Orange,” because, as he likes to say, “life should have both sweetness
+                and weight.”
             </p>
+            <div class="title-text">
+                <img src="images/wqueen.png" alt="About" class="title-icon1">
+                <b> Between Algorithms and Intuition</b>
+                <br>
+            </div>
             <p style="margin: 15px">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am currently a high school student in
-                <a href="https://en.wikipedia.org/wiki/Nanjing_No.1_High_School" target="_blank" style="color: blue">Nanjing No.1 Middle School</a>,
-                China, the monitor of class AP1 and the secretary of Student Union, and the Third-Class National Athlete.
+                I have been playing <a href="https://en.wikipedia.org/wiki/Xiangqi" target="_blank" style="text-decoration: none; color: blue">
+                Xiangqi</a> (Chinese chess) since I was four, under the guidance
+                of Grandmaster <a href="https://www.xqinenglish.com/index.php?option=com_content&view=article&id=218:china-zhang-guofeng&catid=172&Itemid=526&lang=en" target="_blank" style="text-decoration: none; color: blue">
+                Zhang Guofeng</a>. Over time, I realized that chess — like life — isn’t
+                about winning or losing, but about connection. That belief led me to invent two
+                new chess variants, Hybrid Chess and Four-Nation Chess, which blend Chinese and
+                Western systems. They were born from curiosity, but taught me empathy: a game
+                only matters when people enjoy it together. I am also fascinated by consciousness
+                and computation — how reasoning systems can never fully replicate human fragility
+                or creativity. My exploration of this idea led me to design small coding projects
+                and even write essays on how logic meets emotion in everyday decision-making.
             </p>
+            <div class="title-text">
+                <img src="images/wbishop.png" alt="About" class="title-icon1">
+                <b> What I Believe</b>
+                <br>
+            </div>
+            <p style="margin: 15px">
+                I believe  creativity is a form of clarity. Whether I’m writing, playing music,
+                or solving problems, I look for that “moment in between” — where precision meets
+                intuition, and structure meets spontaneity. To me, that’s what makes life
+                bright — not perfection, but the chance to feel fully human.
+            </p>
+
         </div>
     </section>
 
@@ -697,7 +724,7 @@
             <div class="timeline-item" style="animation-delay: 0.3s">
                 <div class="timeline-content">
                     <div class="timeline-year">Grade 2 (2015-2016)</div>
-                    <p><a href="https://carlton-p.schools.nsw.gov.au/" target="_blank" style="color: blue">Carlton Public School</a>, Sydney, NSW, Australia</p>
+                    <p><a href="https://carlton-p.schools.nsw.gov.au/" target="_blank" style="text-decoration: none; color: blue">Carlton Public School</a>, Sydney, NSW, Australia</p>
                 </div>
             </div>
             <div class="timeline-item" style="animation-delay: 0.5s">
@@ -709,7 +736,7 @@
             <div class="timeline-item" style="animation-delay: 0.7s">
                 <div class="timeline-content">
                     <div class="timeline-year">Grade 5 (2018-2019)</div>
-                    <p><a href="https://www.madisoncity.k12.al.us/horizon" target="_blank" style="color: blue">Horizon Elementary School</a>, Madison, AL, USA</p>
+                    <p><a href="https://www.madisoncity.k12.al.us/horizon" target="_blank" style="text-decoration: none; color: blue">Horizon Elementary School</a>, Madison, AL, USA</p>
                 </div>
             </div>
             <div class="timeline-item" style="animation-delay: 0.9s">
@@ -727,7 +754,7 @@
             <div class="timeline-item" style="animation-delay: 1.3s">
                 <div class="timeline-content">
                     <div class="timeline-year">Grade 10 - Grade 12 (2023-2026)</div>
-                    <p><a href="https://en.wikipedia.org/wiki/Nanjing_No.1_High_School" target="_blank" style="color: blue">Nanjing No.1 Middle School</a>, Nanjing, Jiangsu, China</p>
+                    <p><a href="https://en.wikipedia.org/wiki/Nanjing_No.1_High_School" target="_blank" style="text-decoration: none; color: blue">Nanjing No.1 Middle School</a>, Nanjing, Jiangsu, China</p>
                 </div>
             </div>
         </div>
@@ -839,6 +866,37 @@
 
         <div class="awards-list">
             <div class="award-category">
+                <h3>Xiangqi</h3>
+                <ol class="award-items">
+                    <li>The 2nd place in Jiangsu province Junior Xiangqi Championships Boys Group A, July 2025</li>
+                    <li>The 5th place in <a href="https://www.wxf-xiangqi.org/index.php?option=com_content&view=article&id=1729&Itemid=410&lang=en" target="_blank" style="text-decoration: none; color: blue"> the 4th World Xiangqi Open</a> Men’s U18, University College Dublin, Ireland, August 2024</li>
+                    <li>The 4th place in Jiangsu province Junior Xiangqi Championships Boys Group A, July 2023</li>
+                    <li>The 1st place in “Qi Wang Cup” Nanjing city Children Xiangqi Competition, Boys Group, 2018</li>
+                    <li>The 16th place in National Junior Xiangqi Championships Boys Group D, 2017</li>
+                    <li>The 2nd place in Jiangsu province Junior Xiangqi Championships Boys Group B, 2017</li>
+                    <li>The 1st place in “Qi Wang Cup” Nanjing city Children Xiangqi Competition Boys Group, 2016</li>
+                    <li>The 5th place in National Children Xiangqi Championships Boys Group D, 2015</li>
+                    <li>The 1st place in Jiangsu province Junior Xiangqi Championships Boys Group D, 2015</li>
+                    <li>The 1st place in Nanjing city Children Xiangqi Competition Boys Group D, 2015</li>
+                    <li>The 8th place in National Children Xiangqi Championships Boys Group D, 2014</li>
+                </ol>
+            </div>
+
+            <div class="award-category">
+                <h3>Chess</h3>
+                <ol class="award-items">
+                    <li>My <a href="https://new.uschess.org/" target="_blank" style="text-decoration: none; color: blue">US Chess Federation</a> (USCF) Regular Rating is 1145 based on 24 games.</li>
+                    <li>My <a href="https://new.uschess.org/" target="_blank" style="text-decoration: none; color: blue">US Chess Federation</a> (USCF) Quick Rating is 1005 based on 17 games.</li>
+                    <li>The 28th place in National Elementary Championship K-5 Under 1200, Nashville, TN, USA, 2019</li>
+                    <li>The 15th place in ASSCC Team Championship Elementary (K-6) School, Fairfield, AL, USA, 2019</li>
+                    <li>The 10th place in 2019 Rookie Rally K-6 Championship, Huntsville, AL, USA, 2019</li>
+                    <li>The 6th place in 2019 Winter Knights Grade 5-6, Madison, AL, USA, 2019</li>
+                    <li>The 2nd place in 2018 Queen’s Quest Scholastic K-5 Championship, Madison, AL, USA, 2018</li>
+                    <li>The 1st place in 2018 Fall Scholars Non-Rated Section, Madison, AL, USA, 2018</li>
+                </ol>
+            </div>
+
+            <div class="award-category">
                 <h3>Mathematics</h3>
                 <ol class="award-items">
                     <li>A score of 11 on American Invitational Mathematics Examination, February 2025</li>
@@ -885,7 +943,7 @@
                 <h3>Innovation & Invention</h3>
                 <ol class="award-items">
                     <li>The 3rd prize in the Invention Convention China for the intelligent interactive desktop based on sensor technology and coordinate system, July 2025</li>
-                    <li>The 3rd prize and the DI Exploration Spirit Award in the Technical Category A of the Destination Imagination (DI) National Competition，qualifying for the Global Competition, December 2025</li>
+                    <li>The 1st prize and the DI Exploration Spirit Award in the Technical Category A of the Destination Imagination (DI) National Competition，qualifying for the Global Competition, December 2025</li>
 
                 </ol>
             </div>
@@ -914,36 +972,6 @@
                 </ol>
             </div>
 
-            <div class="award-category">
-                <h3>Xiangqi</h3>
-                <ol class="award-items">
-                    <li>The 2nd place in Jiangsu province Junior Xiangqi Championships Boys Group A, July 2025</li>
-                    <li>The 5th place in <a href="https://www.wxf-xiangqi.org/index.php?option=com_content&view=article&id=1729&Itemid=410&lang=en" target="_blank"> the 4th World Xiangqi Open</a> Men’s U18, University College Dublin, Ireland, August 2024</li>
-                    <li>The 4th place in Jiangsu province Junior Xiangqi Championships Boys Group A, July 2023</li>
-                    <li>The 1st place in “Qi Wang Cup” Nanjing city Children Xiangqi Competition, Boys Group, 2018</li>
-                    <li>The 16th place in National Junior Xiangqi Championships Boys Group D, 2017</li>
-                    <li>The 2nd place in Jiangsu province Junior Xiangqi Championships Boys Group B, 2017</li>
-                    <li>The 1st place in “Qi Wang Cup” Nanjing city Children Xiangqi Competition Boys Group, 2016</li>
-                    <li>The 5th place in National Children Xiangqi Championships Boys Group D, 2015</li>
-                    <li>The 1st place in Jiangsu province Junior Xiangqi Championships Boys Group D, 2015</li>
-                    <li>The 1st place in Nanjing city Children Xiangqi Competition Boys Group D, 2015</li>
-                    <li>The 8th place in National Children Xiangqi Championships Boys Group D, 2014</li>
-                </ol>
-            </div>
-
-            <div class="award-category">
-                <h3>Chess</h3>
-                <ol class="award-items">
-                    <li>My <a href="https://new.uschess.org/">US Chess Federation</a> (USCF) Regular Rating is 1145 based on 24 games.</li>
-                    <li>My <a href="https://new.uschess.org/">US Chess Federation</a> (USCF) Quick Rating is 1005 based on 17 games.</li>
-                    <li>The 28th place in National Elementary Championship K-5 Under 1200, Nashville, TN, USA, 2019</li>
-                    <li>The 15th place in ASSCC Team Championship Elementary (K-6) School, Fairfield, AL, USA, 2019</li>
-                    <li>The 10th place in 2019 Rookie Rally K-6 Championship, Huntsville, AL, USA, 2019</li>
-                    <li>The 6th place in 2019 Winter Knights Grade 5-6, Madison, AL, USA, 2019</li>
-                    <li>The 2nd place in 2018 Queen’s Quest Scholastic K-5 Championship, Madison, AL, USA, 2018</li>
-                    <li>The 1st place in 2018 Fall Scholars Non-Rated Section, Madison, AL, USA, 2018</li>
-                </ol>
-            </div>
         </div>
     </section>
 
@@ -976,15 +1004,15 @@
                 <div class="gallery">
                     <div class="gallery-item">
                         <img src="images/charity1.jpg" alt="Activity 4">
-                        <div class="caption">In every year from 2019 to 2025, I used saving pocket money to fund education of one poor child living in <a href="https://en.wikipedia.org/wiki/Daliang_Mountains" target="_blank" style="color: deepskyblue">Daliang Mountains</a> in Sichuan, China. I was very happy to know that my little contribution had already helped two girls finish elementary and middle school respectively.</div>
+                        <div class="caption">In every year from 2019 to 2025, I used saving pocket money to fund education of one poor child living in <a href="https://en.wikipedia.org/wiki/Daliang_Mountains" target="_blank" style="text-decoration: none; color: deepskyblue">Daliang Mountains</a> in Sichuan, China. I was very happy to know that my little contribution had already helped two girls finish elementary and middle school respectively.</div>
                     </div>
                     <div class="gallery-item">
                         <img src="images/charity2.jpg" alt="Activity 5">
-                        <div class="caption">In 2024, I completed the Nanjing Charity Walk around the <a href="https://en.wikipedia.org/wiki/City_Wall_of_Nanjing" target="_blank" style="color: deepskyblue">Nanjing City Wall</a>.</div>
+                        <div class="caption">In 2024, I completed the Nanjing Charity Walk around the <a href="https://en.wikipedia.org/wiki/City_Wall_of_Nanjing" target="_blank" style="text-decoration: none; color: deepskyblue">Nanjing City Wall</a>.</div>
                     </div>
                     <div class="gallery-item">
                         <img src="images/charity3.jpg" alt="Activity 6">
-                        <div class="caption">In 2023, I took part in the city promotion activity called “<a href="https://en.wikipedia.org/wiki/Nanjing_Week" target="_blank" style="color: deepskyblue">Nanjing Week</a>”.</div>
+                        <div class="caption">In 2023, I took part in the city promotion activity called “<a href="https://en.wikipedia.org/wiki/Nanjing_Week" target="_blank" style="text-decoration: none; color: deepskyblue">Nanjing Week</a>”.</div>
                     </div>
                     <div class="gallery-item">
                         <img src="images/volunteer1.jpg" alt="Activity 7">
@@ -1028,7 +1056,7 @@
                     </div>
                     <div class="gallery-item">
                         <img src="images/xiangqi2.jpg" alt="Activity 14">
-                        <div class="caption">In 2024, I took part in <a href="https://www.wxf-xiangqi.org/index.php?option=com_content&view=article&id=1729&Itemid=410&lang=en" target="_blank" style="color: deepskyblue">the 4th World Xiangqi Open</a> in University College Dublin, Ireland.</div>
+                        <div class="caption">In 2024, I took part in <a href="https://www.wxf-xiangqi.org/index.php?option=com_content&view=article&id=1729&Itemid=410&lang=en" target="_blank" style="text-decoration: none; color: deepskyblue">the 4th World Xiangqi Open</a> in University College Dublin, Ireland.</div>
                     </div>
                     <div class="gallery-item">
                         <img src="images/xiangqi4.jpg" alt="Activity 15">
